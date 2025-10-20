@@ -1,0 +1,50 @@
+ <header class="header" role="banner">
+      <div class="site-header">
+        <nav class="navbar navbar-expand-lg" role="navigation" [attr.aria-label]="'Main navigation'">
+          <div class="container-fluid px-4 h-100 d-flex align-items-center">
+            <a 
+              class="navbar-brand" 
+              [routerLink]="logoRoute"
+              >
+              <img 
+                [src]="logoImage" 
+                [alt]="logoAlt" 
+                class="logo"
+                [width]="logoWidth"
+                [height]="logoHeight">
+            </a>
+            
+            <button 
+              class="navbar-toggler" 
+              type="button" 
+              (click)="toggleMenu()"
+              [attr.aria-expanded]="isMenuOpen"
+              [attr.aria-label]="isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" [class.show]="isMenuOpen" [id]="'navbarNav'">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0" role="menubar">
+                <li class="nav-item" *ngFor="let item of navItems" role="none">
+                  <a 
+                    class="nav-link" 
+                    [routerLink]="item.route"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                    [title]="item.label"
+                    role="menuitem">
+                    {{ item.label }}
+                  </a>
+                </li>
+              </ul>
+              
+              <app-button 
+                [text]="ctaButtonText" 
+                [route]="ctaButtonRoute" 
+                [variant]="'primary'">
+              </app-button>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>

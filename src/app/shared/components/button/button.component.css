@@ -1,0 +1,39 @@
+ .btn-custom {
+      /* size per design */
+      width: 151px;
+      height: 50px;
+      padding: 0 20px; /* vertical size fixed by height, horizontal padding per design */
+      border-radius: 24px;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      border: none;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+
+    .btn-custom:focus {
+      outline: 2px solid rgba(255, 255, 255, 0.5);
+      outline-offset: 2px;
+    }
+
+    .btn-primary-custom,
+    .btn-secondary-custom {
+      background: #9193CD; /* requested color */
+      color: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .btn-primary-custom:hover,
+    .btn-primary-custom:focus,
+    .btn-secondary-custom:hover,
+    .btn-secondary-custom:focus {
+      background: #7f81b8; /* slightly darker on hover */
+      transform: translateY(-2px);
+      color: white;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.16);
+    }

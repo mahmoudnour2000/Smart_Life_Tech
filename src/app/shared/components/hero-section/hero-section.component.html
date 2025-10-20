@@ -1,0 +1,27 @@
+ <section 
+      class="hero-section" 
+      [style.background-image]="'url(' + backgroundImage + ')'"
+      role="region">
+      <div class="hero-overlay" [attr.aria-hidden]="true"></div>
+      <div class="hero-content">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-9 text-center">
+              <h1 class="hero-title" [id]="'hero-title'">{{ title }}</h1>
+
+              <!-- small subtitle line (distinct font/style) -->
+              <p class="hero-subtitle" [id]="'hero-subtitle'" *ngIf="subtitle">{{ subtitle }}</p>
+
+              <!-- longer description paragraph under the subtitle -->
+              <p class="hero-description" *ngIf="description">{{ description }}</p>
+
+              <app-button 
+                [text]="buttonText" 
+                [route]="buttonRoute" 
+                [variant]="'secondary'">
+              </app-button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

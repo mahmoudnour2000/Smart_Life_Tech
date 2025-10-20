@@ -1,0 +1,9 @@
+ <a 
+      [routerLink]="route" 
+      class="btn btn-custom"
+      [class.btn-primary-custom]="variant === 'primary'"
+      [class.btn-secondary-custom]="variant === 'secondary'"
+      [attr.title]="title"
+      role="button">
+      {{ text }}
+    </a>
