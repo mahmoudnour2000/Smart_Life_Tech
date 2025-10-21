@@ -58,21 +58,21 @@ export class FooterComponent implements OnInit {
   ];
 
   @Input() contactInfo: ContactInfo[] = [
-    { type: 'email', value: 'Info@lifetech.sa', icon: '✉' },
-    { type: 'phone', value: '966537733222+', icon: '📞' },
-    { type: 'phone', value: '966537733222+', icon: '📞' },
-    { type: 'address', value: 'Riyadh, Al-Rabwah District, Al-Mukhtar Bin Bieh', icon: '📍' },
-    { type: 'address', value: 'Jeddah, Al-Hamra District, Palestine Street.', icon: '📍' }
+    { type: 'email', value: 'Info@lifetech.sa', icon: 'assets/images/email_Icon.png' },
+    { type: 'phone', value: '966537733222+', icon: 'assets/images/phone_Icon.png' },
+    { type: 'phone', value: '966537733222+', icon: 'assets/images/phone_Icon.png' },
+    { type: 'address', value: 'Riyadh, Al-Rabwah District, Al-Mukhtar Bin Bieh', icon: 'assets/images/location_Icon.png' },
+    { type: 'address', value: 'Jeddah, Al-Hamra District, Palestine Street.', icon: 'assets/images/location_Icon.png' }
   ];
 
   @Input() socialMedia: SocialMedia[] = [
-    { name: 'Telegram', icon: '📱', url: 'https://t.me/lifetech', ariaLabel: 'Visit our Telegram channel' },
-    { name: 'YouTube', icon: '▶️', url: 'https://youtube.com/@lifetech', ariaLabel: 'Visit our YouTube channel' },
-    { name: 'WhatsApp', icon: '💬', url: 'https://wa.me/966537733222', ariaLabel: 'Contact us on WhatsApp' },
-    { name: 'X (Twitter)', icon: '✖️', url: 'https://x.com/lifetech', ariaLabel: 'Follow us on X' },
-    { name: 'TikTok', icon: '🎵', url: 'https://tiktok.com/@lifetech', ariaLabel: 'Follow us on TikTok' },
-    { name: 'Instagram', icon: '📷', url: 'https://instagram.com/lifetech', ariaLabel: 'Follow us on Instagram' },
-    { name: 'Facebook', icon: 'f', url: 'https://facebook.com/lifetech', ariaLabel: 'Follow us on Facebook' }
+    { name: 'Telegram', icon: 'assets/images/telegram_icon.png', url: 'https://t.me/lifetech', ariaLabel: 'Visit our Telegram channel' },
+    { name: 'YouTube', icon: 'assets/images/youtube_icon.png', url: 'https://youtube.com/@lifetech', ariaLabel: 'Visit our YouTube channel' },
+    { name: 'WhatsApp', icon: 'assets/images/whatsapp_icon.png', url: 'https://wa.me/966537733222', ariaLabel: 'Contact us on WhatsApp' },
+    { name: 'X (Twitter)', icon: 'assets/images/twitter_icon.png', url: 'https://x.com/lifetech', ariaLabel: 'Follow us on X' },
+    { name: 'TikTok', icon: 'assets/images/tiktok_icon.png', url: 'https://tiktok.com/@lifetech', ariaLabel: 'Follow us on TikTok' },
+    { name: 'Instagram', icon: 'assets/images/insta_icon.png', url: 'https://instagram.com/lifetech', ariaLabel: 'Follow us on Instagram' },
+    { name: 'Facebook', icon: 'assets/images/facebook_icon.png', url: 'https://facebook.com/lifetech', ariaLabel: 'Follow us on Facebook' }
   ];
   constructor() { }
 

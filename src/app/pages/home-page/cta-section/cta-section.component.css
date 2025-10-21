@@ -1,0 +1,88 @@
+.cta-section {
+      position: relative;
+      min-height: 500px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 5rem 1rem;
+    }
+
+   
+
+    .container {
+      z-index: 2;
+    }
+
+    .cta-label {
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      opacity: 0.9;
+      font-weight: 500;
+    }
+
+    .cta-title {
+      font-size: 2.5rem;
+      line-height: 1.3;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-description {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      opacity: 0.95;
+      max-width: 850px;
+      margin: 0 auto 2rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 991px) {
+      .cta-section {
+        min-height: 450px;
+        padding: 4rem 1rem;
+      }
+
+      .cta-title {
+        font-size: 2rem;
+      }
+
+      .cta-description {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .cta-section {
+        min-height: 400px;
+        padding: 3rem 1rem;
+      }
+
+      .cta-label {
+        font-size: 0.85rem;
+      }
+
+      .cta-title {
+        font-size: 1.75rem;
+        line-height: 1.4;
+      }
+
+      .cta-description {
+        font-size: 0.95rem;
+        line-height: 1.7;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .cta-section {
+        min-height: 350px;
+        padding: 2.5rem 1rem;
+      }
+
+      .cta-title {
+        font-size: 1.5rem;
+      }
+
+      .cta-description {
+        font-size: 0.9rem;
+      }
+    }

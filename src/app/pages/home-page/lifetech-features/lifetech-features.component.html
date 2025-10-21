@@ -1,0 +1,30 @@
+<section class="features-section py-5">
+      <div class="container">
+        <!-- Header -->
+        <div class="text-center mb-5">
+          <h2 *ngIf="title" class="fw-bold mb-3">{{ title }}</h2>
+          <p *ngIf="subtitle" class="text-muted subtitle">{{ subtitle }}</p>
+        </div>
+
+        <!-- Content Row -->
+        <div class="row align-items-center g-5">
+          <!-- Image Column -->
+          <div class="col-12 col-lg-5" [class.order-lg-2]="imagePosition === 'right'">
+            <div class="image-container">
+              <img [src]="image" [alt]="title" class="img-fluid">
+            </div>
+          </div>
+
+          <!-- Features Column -->
+          <div class="col-12 col-lg-7" [class.order-lg-1]="imagePosition === 'right'">
+            <div class="features-card p-4 p-md-5">
+              <ul class="features-list mb-0">
+                <li *ngFor="let feature of features" class="feature-item">
+                  {{ feature.text }}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

@@ -1,0 +1,35 @@
+<section 
+      class="cta-section d-flex align-items-center justify-content-center"
+      [style.background-image]="backgroundImage ? 'url(' + backgroundImage + ')' : 'none'">
+      
+      <!-- Overlay -->
+      <div class="overlay"></div>
+
+      <!-- Content -->
+      <div class="container position-relative">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 col-xl-9">
+            <div class="text-center text-white">
+              <!-- Label -->
+              <p *ngIf="label" class="cta-label mb-3">{{ label }}</p>
+
+              <!-- Title -->
+              <h2 *ngIf="title" class="cta-title fw-bold mb-4">{{ title }}</h2>
+
+              <!-- Description -->
+              <p *ngIf="description" class="cta-description mb-4">{{ description }}</p>
+
+              <!-- Button -->
+              <div *ngIf="showButton" class="mt-4">
+                <app-button
+                  [text]="buttonText"
+                  [route]="buttonRoute"
+                  [variant]="buttonVariant"
+                  [title]="buttonTitle">
+                </app-button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

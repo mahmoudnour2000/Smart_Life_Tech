@@ -1,0 +1,64 @@
+<div class="smart-systems-container">
+  <!-- Header Section -->
+  <div class="header-section text-center">
+    <h1 class="main-title">Our Smart Systems</h1>
+    <p class="main-subtitle">Elevate Your Everyday Living</p>
+  </div>
+
+  <!-- Slider Section -->
+  <div class="slider-section">
+    <div class="slide-card">
+      <!-- Background Image -->
+      <div class="slide-background" [style.background-image]="'url(' + currentSlide.image + ')'">
+        <div class="slide-overlay"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="slide-content">
+        <h2 class="slide-title">{{ currentSlide.title }}</h2>
+        <p class="slide-description">{{ currentSlide.description }}</p>
+        
+        <app-button 
+          [text]="currentSlide.buttonText"
+          [route]="currentSlide.buttonRoute"
+          [variant]="'primary'"
+        ></app-button>
+      </div>
+    </div>
+
+    <!-- Controls Container (Below Card) -->
+    <div class="controls-container">
+      <!-- Navigation Arrows -->
+      <div class="navigation-arrows">
+        <button 
+          class="arrow-btn arrow-left" 
+          (click)="previousSlide()"
+          aria-label="Previous slide">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+        </button>
+
+        <button 
+          class="arrow-btn arrow-right" 
+          (click)="nextSlide()"
+          aria-label="Next slide">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M9 18l6-6-6-6"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Indicators -->
+      <div class="slide-indicators">
+        <span 
+          *ngFor="let slide of slides; let i = index"
+          class="indicator-dot"
+          [class.active]="i === currentIndex"
+          (click)="goToSlide(i)"
+          [attr.aria-label]="'Go to slide ' + (i + 1)">
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

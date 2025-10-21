@@ -1,0 +1,63 @@
+<section class="lifestyle-section" [attr.aria-label]="ariaLabel">
+      <div class="container-fluid px-4">
+        <!-- Title Section -->
+        <div class="row mb-4">
+          <div class="col-12 text-center">
+            <h2 class="section-title">{{ title }}</h2>
+            <p class="section-description">{{ description }}</p>
+          </div>
+        </div>
+
+        <!-- Slider Section -->
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="slider-container">
+              <div class="slider-wrapper" 
+                   [style.transform]="'translateX(calc(-' + currentSlide + ' * (100% / ' + itemsPerView + ' + 20px)))'">
+                <div 
+                  class="slide-item" 
+                  *ngFor="let item of items; let i = index"
+                  [class.active]="i === currentSlide">
+                  <img 
+                    [src]="item.image" 
+                    [alt]="item.alt"
+                    class="slide-image"
+                    loading="lazy">
+                  <div class="slide-overlay" *ngIf="item.title">
+                    <h3>{{ item.title }}</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Section -->
+        <div class="row">
+          <div class="col-12">
+            <div class="slider-controls">
+              <div class="arrow-buttons">
+                <button 
+                  class="arrow-btn prev-btn"
+                  (click)="previousSlide()"
+                  [attr.aria-label]="'Previous slide'">
+                  <span>‹</span>
+                </button>
+                <button 
+                  class="arrow-btn next-btn"
+                  (click)="nextSlide()"
+                  [attr.aria-label]="'Next slide'">
+                  <span>›</span>
+                </button>
+              </div>
+              <app-button 
+                [text]="buttonText" 
+                [route]="buttonRoute"
+                [variant]="'primary'"
+                [ariaLabel]="'View more lifestyle options'">
+              </app-button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

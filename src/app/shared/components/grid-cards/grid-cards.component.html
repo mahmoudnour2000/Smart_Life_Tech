@@ -1,0 +1,27 @@
+<section class="py-5">
+      <div class="container">
+        <!-- Optional Header -->
+        <div *ngIf="sectionTitle || sectionSubtitle" class="text-center mb-5">
+          <h2 *ngIf="sectionTitle" class="fw-bold mb-3">{{ sectionTitle }}</h2>
+          <p *ngIf="sectionSubtitle" class="text-muted">{{ sectionSubtitle }}</p>
+        </div>
+
+        <!-- Cards Grid with Asymmetric Layout -->
+        <div class="row g-4">
+          <div 
+            *ngFor="let card of cards; let i = index" 
+            [ngClass]="getCardClasses(i)">
+            
+            <div class="card smart-card h-100 border-0 overflow-hidden">
+              <div class="card-img-overlay d-flex flex-column justify-content-end text-white p-4">
+                <div class="card-content">
+                  <h3 class="card-title fw-bold mb-3">{{ card.title }}</h3>
+                  <p class="card-text">{{ card.description }}</p>
+                </div>
+              </div>
+              <img [src]="card.image" [alt]="card.title" class="card-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

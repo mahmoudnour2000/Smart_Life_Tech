@@ -1,0 +1,31 @@
+<section class="products-showcase py-5">
+      <div class="container">
+        <!-- Header -->
+        <div class="text-center mb-5">
+          <h2 *ngIf="title" class="fw-bold mb-3">{{ title }}</h2>
+          <p *ngIf="subtitle" class="text-muted subtitle">{{ subtitle }}</p>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid mb-5">
+          <div 
+            *ngFor="let product of products; let i = index" 
+            class="product-item"
+            [class.large]="isLargeItem(i)">
+            <div class="product-card">
+              <img [src]="product.image" [alt]="product.alt" class="product-image">
+            </div>
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div *ngIf="showButton" class="text-center">
+          <app-button
+            [text]="buttonText"
+            [route]="buttonRoute"
+            [variant]="buttonVariant"
+            [title]="buttonTitle">
+          </app-button>
+        </div>
+      </div>
+    </section>

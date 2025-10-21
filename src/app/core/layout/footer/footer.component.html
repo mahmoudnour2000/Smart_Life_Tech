@@ -1,71 +1,83 @@
 <footer class="footer" role="contentinfo">
-      <!-- Main Footer Section -->
-      <div class="footer-main" [style.background-image]="'url(' + backgroundImage + ')'">
-        <div class="container-fluid px-4">
-          <div class="row gy-4">
-            <!-- Company Info -->
-            <div class="col-lg-3 col-md-6">
-              <div class="footer-brand">
-                <img 
-                  [src]="logoImage" 
-                  [alt]="logoAlt" 
-                  class="footer-logo"
-                  [width]="logoWidth"
-                  [height]="logoHeight">
-                <p class="footer-description">{{ companyDescription }}</p>
-              </div>
-            </div>
+  <!-- Main Footer Section -->
+  <div class="footer-main" [style.background-image]="'url(' + backgroundImage + ')'">
+    <div class="container-fluid px-4">
+      <div class="row gy-4">
+        <!-- Company Info -->
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-brand">
+            <img
+              [src]="logoImage"
+              [alt]="logoAlt"
+              class="footer-logo"
+              [width]="logoWidth"
+              [height]="logoHeight"
+            />
+            <p class="footer-description">{{ companyDescription }}</p>
+          </div>
+        </div>
 
-            <!-- Footer Sections -->
-            <div class="col-lg-2 col-md-6" *ngFor="let section of footerSections">
-              <h3 class="footer-title">{{ section.title }}</h3>
-              <ul class="footer-links">
-                <li *ngFor="let link of section.links">
-                  <a 
-                    [routerLink]="link.route"
-                    [attr.aria-label]="'Navigate to ' + link.label">
-                    {{ link.label }}
-                  </a>
-                </li>
-              </ul>
-            </div>
+        <!-- Footer Sections -->
+        <div class="col-lg-2 col-md-6" *ngFor="let section of footerSections">
+          <h3 class="footer-title">{{ section.title }}</h3>
+          <ul class="footer-links">
+            <li *ngFor="let link of section.links">
+              <a [routerLink]="link.route" [attr.aria-label]="'Navigate to ' + link.label">
+                {{ link.label }}
+              </a>
+            </li>
+          </ul>
+        </div>
 
-            <!-- Contact Info -->
-            <div class="col-lg-3 col-md-6">
-              <h3 class="footer-title">Contact Us</h3>
-              <ul class="footer-contact">
-                <li *ngFor="let contact of contactInfo" [class]="'contact-' + contact.type">
-                  <span class="contact-icon">{{ contact.icon }}</span>
-                  <span class="contact-text">{{ contact.value }}</span>
-                </li>
-              </ul>
-            </div>
+        <!-- Contact Info -->
+        <div class="col-lg-3 col-md-6">
+          <h3 class="footer-title">Contact Us</h3>
+          <ul class="footer-contact">
+            <li *ngFor="let contact of contactInfo" [class]="'contact-' + contact.type">
+              <img
+                class="contact-icon"
+                [src]="contact.icon"
+                [alt]="contact.type + ' icon'"
+                width="20"
+                height="20"
+              />
+              <span class="contact-text">{{ contact.value }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <div class="container-fluid px-4">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <p class="copyright">{{ copyrightText }}</p>
+        </div>
+        <div class="col-md-6">
+          <div class="social-links">
+            <a
+              *ngFor="let social of socialMedia"
+              [href]="social.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              [attr.aria-label]="social.ariaLabel"
+              [title]="social.name"
+              class="social-link"
+            >
+              <img
+                [src]="social.icon"
+                [alt]="social.name + ' icon'"
+                class="social-icon"
+                width="24"
+                height="24"
+              />
+            </a>
           </div>
         </div>
       </div>
-
-      <!-- Footer Bottom -->
-      <div class="footer-bottom">
-        <div class="container-fluid px-4">
-          <div class="row align-items-center">
-            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-              <p class="copyright">{{ copyrightText }}</p>
-            </div>
-            <div class="col-md-6">
-              <div class="social-links">
-                <a 
-                  *ngFor="let social of socialMedia"
-                  [href]="social.url"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  [attr.aria-label]="social.ariaLabel"
-                  [title]="social.name"
-                  class="social-link">
-                  <span [innerHTML]="social.icon"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    </div>
+  </div>
+</footer>
