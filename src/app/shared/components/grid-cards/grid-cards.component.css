@@ -1,6 +1,7 @@
- .smart-card {
+.smart-card {
       position: relative;
-      min-height: 320px;
+      min-height: 280px;
+      max-height: 450px;
       border-radius: 20px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;

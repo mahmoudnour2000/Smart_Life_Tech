@@ -17,6 +17,8 @@ export class HeroSectionComponent implements OnInit {
   @Input() description: string = '';
   @Input() buttonText: string = 'Learn More';
   @Input() buttonRoute: string = '/';
+  @Input() showButton: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
