@@ -6,3 +6,32 @@
   "
 >
 </app-hero-section>
+
+<div class="container">
+  <!-- Section 1: Smart Home Products - بدون فلترة -->
+    <app-product-slider
+      title="Smart Home Products"
+      [products]="smartHomeProducts"
+      [showFilters]="false"
+      [showDots]="true">
+    </app-product-slider>
+
+    <!-- Section 2: Lighting Products - مع فلترة -->
+    <app-product-slider
+      title="Lighting products"
+      [products]="lightingProducts"
+      [filterTabs]="lightingFilters"
+      [showFilters]="true"
+      [showDots]="true">
+    </app-product-slider>
+
+    <!-- Section 3: Cables & Accessories - مع فلترة -->
+    <app-product-slider
+      title="cables & accessories"
+      [products]="cablesProducts"
+      [filterTabs]="cablesFilters"
+      [showFilters]="true"
+      [showDots]="true">
+    </app-product-slider>
+
+</div>
