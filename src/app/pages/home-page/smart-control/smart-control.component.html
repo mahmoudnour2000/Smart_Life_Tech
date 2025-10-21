@@ -1,0 +1,57 @@
+ <section class="app-control-section py-5">
+      <div class="container">
+        <!-- Title -->
+        <div class="text-center mb-5">
+          <h2 *ngIf="title" class="fw-bold section-title">{{ title }}</h2>
+        </div>
+
+        <!-- Content Row -->
+        <div class="row align-items-center g-5">
+          <!-- Image Column -->
+          <div class="col-12 col-lg-5" [class.order-lg-2]="imagePosition === 'right'">
+            <div class="image-container">
+              <img [src]="image" [alt]="title" class="img-fluid app-image">
+            </div>
+          </div>
+
+          <!-- Content Column -->
+          <div class="col-12 col-lg-7" [class.order-lg-1]="imagePosition === 'right'">
+            <div class="content-wrapper">
+              <!-- Description Paragraphs -->
+              <div class="description-text mb-4">
+                <p *ngFor="let paragraph of descriptionParagraphs" class="mb-3">
+                  {{ paragraph }}
+                </p>
+              </div>
+
+              <!-- App Store Buttons -->
+              <div class="app-stores d-flex flex-wrap gap-3">
+                <a 
+                  *ngIf="appStoreLink" 
+                  [href]="appStoreLink" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="store-link">
+                  <img 
+                    [src]="appStoreImage || 'assets/images/app-store.png'" 
+                    alt="Download on the App Store"
+                    class="store-badge">
+                </a>
+                
+                <a 
+                  *ngIf="playStoreLink" 
+                  [href]="playStoreLink" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="store-link">
+                  <img 
+                    [src]="playStoreImage || 'assets/images/google-play.png'" 
+                    alt="Get it on Google Play"
+                    class="store-badge">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

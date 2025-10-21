@@ -16,6 +16,7 @@
               <p class="hero-description" *ngIf="description">{{ description }}</p>
 
               <app-button 
+                          *ngIf="showButton"
                 [text]="buttonText" 
                 [route]="buttonRoute" 
                 [variant]="'secondary'">

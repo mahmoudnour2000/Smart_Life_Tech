@@ -1,0 +1,28 @@
+ <section class="about-section" [attr.aria-label]="ariaLabel">
+      <div class="container-fluid px-4">
+        <!-- Title Section -->
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="section-title">{{ title }}</h2>
+            <p class="section-subtitle">{{ subtitle }}</p>
+          </div>
+        </div>
+
+        <!-- Video Section -->
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-xl-9">
+            <div class="video-container">
+              <iframe
+                [src]="safeVideoUrl"
+                [title]="videoTitle"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                class="video-iframe">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
