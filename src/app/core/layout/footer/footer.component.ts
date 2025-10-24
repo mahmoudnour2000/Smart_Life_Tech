@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ContactInfo, FooterSection, SocialMedia } from '../../models/layout';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
-    imports: [CommonModule, RouterModule],
+    imports: [CommonModule, RouterModule, TranslateModule],
 
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
@@ -23,36 +24,36 @@ export class FooterComponent implements OnInit {
 
   @Input() footerSections: FooterSection[] = [
     {
-      title: 'Our website',
+      title: 'footer.sections.ourWebsite.title',
       links: [
-        { label: 'Life Tech', route: '/' },
-        { label: 'Smart Homes', route: '/smart-homes' },
-        { label: 'Products', route: '/products' },
-        { label: 'Solutions', route: '/solutions' },
-        { label: 'Blog', route: '/blog' },
-        { label: 'Contact us', route: '/contact' },
-        { label: 'Be a partner', route: '/partner' },
-        { label: 'About us', route: '/about' }
+        { label: 'footer.sections.ourWebsite.links.lifeTech', route: '/' },
+        { label: 'footer.sections.ourWebsite.links.smartHomes', route: '/smart-homes' },
+        { label: 'footer.sections.ourWebsite.links.products', route: '/products' },
+        { label: 'footer.sections.ourWebsite.links.solutions', route: '/solutions' },
+        { label: 'footer.sections.ourWebsite.links.blog', route: '/blog' },
+        { label: 'footer.sections.ourWebsite.links.contact', route: '/contact' },
+        { label: 'footer.sections.ourWebsite.links.bePartner', route: '/partner' },
+        { label: 'footer.sections.ourWebsite.links.about', route: '/about' }
       ]
     },
     {
-      title: 'Smart Homes',
+      title: 'footer.sections.smartHomes.title',
       links: [
-        { label: 'Sound System Solutions', route: '/smart-homes/sound-system' },
-        { label: 'Lighting Controls', route: '/smart-homes/lighting' },
-        { label: 'Climate Control', route: '/smart-homes/climate' },
-        { label: 'Motor Control', route: '/smart-homes/motor' },
-        { label: 'Security Systems', route: '/smart-homes/security' },
-        { label: 'Smart Glass', route: '/smart-homes/glass' }
+        { label: 'footer.sections.smartHomes.links.soundSystem', route: '/smart-homes/sound-system' },
+        { label: 'footer.sections.smartHomes.links.lighting', route: '/smart-homes/lighting' },
+        { label: 'footer.sections.smartHomes.links.climate', route: '/smart-homes/climate' },
+        { label: 'footer.sections.smartHomes.links.motor', route: '/smart-homes/motor' },
+        { label: 'footer.sections.smartHomes.links.security', route: '/smart-homes/security' },
+        { label: 'footer.sections.smartHomes.links.glass', route: '/smart-homes/glass' }
       ]
     },
     {
-      title: 'Our Solutions',
+      title: 'footer.sections.ourSolutions.title',
       links: [
-        { label: 'Building Solutions', route: '/solutions/building' },
-        { label: 'Home Solutions', route: '/solutions/home' },
-        { label: 'Hotel Solutions', route: '/solutions/hotel' },
-        { label: 'Hospital Solutions', route: '/solutions/hospital' }
+        { label: 'footer.sections.ourSolutions.links.building', route: '/solutions/building' },
+        { label: 'footer.sections.ourSolutions.links.home', route: '/solutions/home' },
+        { label: 'footer.sections.ourSolutions.links.hotel', route: '/solutions/hotel' },
+        { label: 'footer.sections.ourSolutions.links.hospital', route: '/solutions/hospital' }
       ]
     }
   ];

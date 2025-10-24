@@ -4,29 +4,29 @@
           <!-- Branch Info -->
           <div class="col-lg-6" [class.order-lg-2]="reverse">
             <div class="branch-info">
-              <h2 class="branch-title">{{ branchName }}</h2>
-              
+              <h2 class="branch-title">{{ branchName | translate }}</h2>
+
               <div class="contact-list">
-                <div 
-                  class="contact-item" 
+                <div
+                  class="contact-item"
                   *ngFor="let contact of contacts"
                   [class.has-link]="contact.type === 'phone'">
                   <div class="contact-icon">
-<img 
-  [src]="contact.iconImage" 
+<img
+  [src]="contact.iconImage"
   [alt]="contact.iconAlt"
   class="icon-image">                  </div>
-                  <a 
+                  <a
                     *ngIf="contact.type === 'phone' && contact.link"
                     [href]="contact.link"
                     class="contact-text"
                     [attr.aria-label]="'Call ' + contact.text">
-                    {{ contact.text }}
+                    {{ contact.type === 'phone' ? contact.text : (contact.text | translate) }}
                   </a>
-                  <span 
+                  <span
                     *ngIf="contact.type !== 'phone' || !contact.link"
                     class="contact-text">
-                    {{ contact.text }}
+                    {{ contact.type === 'phone' ? contact.text : (contact.text | translate) }}
                   </span>
                 </div>
               </div>

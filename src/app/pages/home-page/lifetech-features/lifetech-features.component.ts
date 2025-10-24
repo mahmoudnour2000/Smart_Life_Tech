@@ -1,10 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Feature } from '../../../core/models/home-sections';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-lifetech-features',
-  imports:[CommonModule],
+  imports:[CommonModule, TranslateModule],
   templateUrl: './lifetech-features.component.html',
   styleUrls: ['./lifetech-features.component.css']
 })
@@ -15,19 +16,19 @@ export class LifetechFeaturesComponent implements OnInit {
   @Input() imagePosition: 'left' | 'right' = 'left';
  @Input() features: Feature[] = [
     {
-      text: 'It owns more than 160 patents for all products and smart product devices.'
+      text: 'lifetechFeatures.features.patents'
     },
     {
-      text: 'Winner of international awards and certifications in Smart Home System and Smart Solutions.'
+      text: 'lifetechFeatures.features.awards'
     },
     {
-      text: 'Morgen is a leading German manufacturer of smart home products and systems, with all its products 100% quality tested.'
+      text: 'lifetechFeatures.features.manufacturer'
     },
     {
-      text: 'Producing and manufacturing more than 1000 products to meet all cutting-edge smart building and home solutions.'
+      text: 'lifetechFeatures.features.products'
     },
     {
-      text: 'The ability to connect wired and wireless solutions on the system and with the same user interface, as they are fully controlled from a single interface.'
+      text: 'lifetechFeatures.features.connectivity'
     }
   ];
 

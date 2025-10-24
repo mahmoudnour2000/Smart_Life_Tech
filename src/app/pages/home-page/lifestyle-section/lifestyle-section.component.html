@@ -3,8 +3,8 @@
         <!-- Title Section -->
         <div class="row mb-4">
           <div class="col-12 text-center">
-            <h2 class="section-title">{{ title }}</h2>
-            <p class="section-description">{{ description }}</p>
+            <h2 class="section-title">{{ 'lifestyle.title' | translate }}</h2>
+            <p class="section-description">{{ 'lifestyle.description' | translate }}</p>
           </div>
         </div>
 
@@ -50,8 +50,8 @@
                   <span>›</span>
                 </button>
               </div>
-              <app-button 
-                [text]="buttonText" 
+              <app-button
+                [text]="'lifestyle.buttonText' | translate"
                 [route]="buttonRoute"
                 [variant]="'primary'"
                 [ariaLabel]="'View more lifestyle options'">

@@ -1,0 +1,41 @@
+<div class="language-switcher">
+  <!-- Toggle Button -->
+  <button 
+    class="lang-toggle-btn" 
+    (click)="toggleDropdown()"
+    [attr.aria-expanded]="isOpen"
+    aria-label="Change language">
+    <svg class="lang-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M5 8h14M5 8a2 2 0 110-4m0 4a2 2 0 100 4m0-8h14m-14 8v8m0-8h14M5 16h14M5 16a2 2 0 100 4m0-4a2 2 0 110-4m9 4h-4"/>
+      <circle cx="12" cy="12" r="10"/>
+      <path d="m12 2 0 20M2 12h20"/>
+    </svg>
+    <span class="lang-text">{{ currentLang.toUpperCase() }}</span>
+  </button>
+
+  <!-- Dropdown Menu -->
+  <div class="lang-dropdown" [class.show]="isOpen">
+    <button 
+      class="lang-option" 
+      [class.active]="currentLang === 'en'"
+      (click)="changeLanguage('en')">
+      <span class="lang-name">English</span>
+      <span class="lang-code">EN</span>
+    </button>
+    
+    <button 
+      class="lang-option" 
+      [class.active]="currentLang === 'ar'"
+      (click)="changeLanguage('ar')">
+      <span class="lang-name">العربية</span>
+      <span class="lang-code">AR</span>
+    </button>
+  </div>
+</div>
+
+<!-- Backdrop to close dropdown when clicking outside -->
+<div 
+  class="lang-backdrop" 
+  [class.show]="isOpen"
+  (click)="toggleDropdown()">
+</div>

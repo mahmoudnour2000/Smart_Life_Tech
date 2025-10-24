@@ -3,8 +3,8 @@
         <div class="form-wrapper mx-auto">
           <!-- Header -->
           <div class="text-center mb-4">
-            <h2 *ngIf="title" class="form-title fw-bold mb-3">{{ title }}</h2>
-            <p *ngIf="subtitle" class="form-subtitle text-muted">{{ subtitle }}</p>
+            <h2 *ngIf="title" class="form-title fw-bold mb-3">{{ title | translate }}</h2>
+            <p *ngIf="subtitle" class="form-subtitle text-muted">{{ subtitle | translate }}</p>
           </div>
 
           <!-- Form -->
@@ -12,7 +12,7 @@
             <div class="row g-4">
               <!-- Full Name -->
               <div class="col-12 col-md-6">
-                <label class="form-label">Full Name</label>
+                <label class="form-label">{{ 'contactForm.labels.fullName' | translate }}</label>
                 <div class="input-group">
                   <span class="input-icon">
                     <img [src]="userIcon" alt="user" class="field-icon">
@@ -20,18 +20,18 @@
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="Enter your name"
+                    [placeholder]="'contactForm.placeholders.fullName' | translate"
                     formControlName="fullName"
                     [class.is-invalid]="isFieldInvalid('fullName')">
                 </div>
                 <div *ngIf="isFieldInvalid('fullName')" class="invalid-feedback d-block">
-                  Full name is required
+                  {{ 'contactForm.errors.fullNameRequired' | translate }}
                 </div>
               </div>
 
               <!-- Email -->
               <div class="col-12 col-md-6">
-                <label class="form-label">Email Address</label>
+                <label class="form-label">{{ 'contactForm.labels.email' | translate }}</label>
                 <div class="input-group">
                   <span class="input-icon">
                     <img [src]="emailIcon" alt="email" class="field-icon">
@@ -39,39 +39,39 @@
                   <input
                     type="email"
                     class="form-control"
-                    placeholder="Enter your email"
+                    [placeholder]="'contactForm.placeholders.email' | translate"
                     formControlName="email"
                     [class.is-invalid]="isFieldInvalid('email')">
                 </div>
                 <div *ngIf="isFieldInvalid('email')" class="invalid-feedback d-block">
-                  <span *ngIf="contactForm.get('email')?.errors?.['required']">Email is required</span>
-                  <span *ngIf="contactForm.get('email')?.errors?.['email']">Invalid email format</span>
+                  <span *ngIf="contactForm.get('email')?.errors?.['required']">{{ 'contactForm.errors.emailRequired' | translate }}</span>
+                  <span *ngIf="contactForm.get('email')?.errors?.['email']">{{ 'contactForm.errors.emailInvalid' | translate }}</span>
                 </div>
               </div>
 
               <!-- Company (Optional) -->
               <div *ngIf="showCompanyField" class="col-12 col-md-6">
-                <label class="form-label">Company</label>
+                <label class="form-label">{{ 'contactForm.labels.company' | translate }}</label>
                 <input
                   type="text"
                   class="form-control no-icon"
-                  placeholder="Enter your company name"
+                  [placeholder]="'contactForm.placeholders.company' | translate"
                   formControlName="company">
               </div>
 
               <!-- Position (Optional) -->
               <div *ngIf="showPositionField" class="col-12 col-md-6">
-                <label class="form-label">Position</label>
+                <label class="form-label">{{ 'contactForm.labels.position' | translate }}</label>
                 <input
                   type="text"
                   class="form-control no-icon"
-                  placeholder="Enter your position"
+                  [placeholder]="'contactForm.placeholders.position' | translate"
                   formControlName="position">
               </div>
 
               <!-- City -->
               <div class="col-12 col-md-6">
-                <label class="form-label">City</label>
+                <label class="form-label">{{ 'contactForm.labels.city' | translate }}</label>
                 <div class="input-group">
                   <span class="input-icon">
                     <img [src]="locationIcon" alt="location" class="field-icon">
@@ -79,18 +79,18 @@
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="Enter your city"
+                    [placeholder]="'contactForm.placeholders.city' | translate"
                     formControlName="city"
                     [class.is-invalid]="isFieldInvalid('city')">
                 </div>
                 <div *ngIf="isFieldInvalid('city')" class="invalid-feedback d-block">
-                  City is required
+                  {{ 'contactForm.errors.cityRequired' | translate }}
                 </div>
               </div>
 
               <!-- Phone Number -->
               <div class="col-12 col-md-6">
-                <label class="form-label">Phone Number</label>
+                <label class="form-label">{{ 'contactForm.labels.phone' | translate }}</label>
                 <div class="phone-input-group">
                     <select class="country-code" formControlName="countryCode">
                     <option value="+966">+966</option>
@@ -108,19 +108,19 @@
                     <input
                       type="tel"
                       class="form-control"
-                      placeholder="Enter your phone number"
+                      [placeholder]="'contactForm.placeholders.phone' | translate"
                       formControlName="phone"
                       [class.is-invalid]="isFieldInvalid('phone')">
                   </div>
                 </div>
                 <div *ngIf="isFieldInvalid('phone')" class="invalid-feedback d-block">
-                  Phone number is required
+                  {{ 'contactForm.errors.phoneRequired' | translate }}
                 </div>
               </div>
 
               <!-- Message -->
               <div class="col-12">
-                <label class="form-label">Message</label>
+                <label class="form-label">{{ 'contactForm.labels.message' | translate }}</label>
                 <div class="input-group">
                   <span class="input-icon textarea-icon">
                     <img [src]="messageIcon" alt="message" class="field-icon">
@@ -128,13 +128,13 @@
                   <textarea
                     class="form-control"
                     rows="5"
-                    placeholder="Enter your Message here"
+                    [placeholder]="'contactForm.placeholders.message' | translate"
                     formControlName="message"
                     [class.is-invalid]="isFieldInvalid('message')">
                   </textarea>
                 </div>
                 <div *ngIf="isFieldInvalid('message')" class="invalid-feedback d-block">
-                  Message is required
+                  {{ 'contactForm.errors.messageRequired' | translate }}
                 </div>
               </div>
 
@@ -144,10 +144,10 @@
                   type="submit"
                   class="btn btn-submit"
                   [disabled]="isSubmitting">
-                  <span *ngIf="!isSubmitting">{{ buttonText }}</span>
+                  <span *ngIf="!isSubmitting">{{ buttonText | translate }}</span>
                   <span *ngIf="isSubmitting">
                     <span class="spinner-border spinner-border-sm me-2" role="status"></span>
-                    Sending...
+                    {{ 'contactForm.sending' | translate }}
                   </span>
                 </button>
               </div>

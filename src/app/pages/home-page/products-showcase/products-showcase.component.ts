@@ -2,12 +2,13 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ButtonComponent } from "../../../shared/components/button/button.component";
 import { Product } from '../../../core/models/home-sections';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-products-showcase',
   templateUrl: './products-showcase.component.html',
   styleUrls: ['./products-showcase.component.css'],
-  imports: [ButtonComponent,CommonModule]
+  imports: [ButtonComponent,CommonModule, TranslateModule]
 })
 export class ProductsShowcaseComponent implements OnInit {
 @Input() title?: string="Moorgen's Exclusive Products";

@@ -3,12 +3,13 @@ import { HeroSectionComponent } from "../../shared/components/hero-section/hero-
 import { ContactFormComponent } from "../../shared/components/contact-form/contact-form.component";
 import { PartnersSectionComponent } from "./partners-section/partners-section.component";
 import { WhyPartnerComponent } from "./why-partner/why-partner.component";
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-be-partner',
   templateUrl: './be-partner.component.html',
   styleUrls: ['./be-partner.component.css'],
-  imports: [HeroSectionComponent, ContactFormComponent, PartnersSectionComponent, WhyPartnerComponent]
+  imports: [HeroSectionComponent, ContactFormComponent, PartnersSectionComponent, WhyPartnerComponent, TranslateModule]
 })
 export class BePartnerComponent implements OnInit {
 

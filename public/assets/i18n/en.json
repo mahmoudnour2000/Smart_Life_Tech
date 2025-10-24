@@ -1,0 +1,505 @@
+{
+  "hero": {
+    "title": "LifeTech",
+    "subtitle": "Your World, Transformed – Experience the Future of Smart Living",
+    "description": "Welcome to Life Tech, where innovation meets intuition to engineer your perfect mood and transform your world. As a leading Saudi company specializing in cutting-edge smart technologies, we're dedicated to crafting intelligent living and working environments that anticipate your every need and exceed your expectations. Forget just smart homes; we create an intelligent life designed to make your daily existence easier, more comfortable, and truly extraordinary.",
+    "buttonText": "Learn More"
+  },
+  "lifestyle": {
+    "title": "Create Your Way of Living",
+    "description": "Introducing the future of homes, where high-end technology meets ultimate comfort. Intelligent systems, elegant design, and unlimited control... Every detail is designed to fit your luxurious lifestyle.",
+    "buttonText": "More"
+  },
+  "Solutions": {
+    "title": "Smart Building Solutions",
+    "subtitle": "Elevate Your Commercial & Public Spaces",
+    "buttonText": "Find Out More",
+    "cards": {
+      "building-automation": {
+        "title": "Building Automation System (BAS)",
+        "description": "BAS monitors and controls key systems—HVAC, lighting, access, and security—while providing data for smarter decisions, better energy use, and improved performance."
+      },
+      "energy-management": {
+        "title": "Energy Management Systems (EMS)",
+        "description": "EMS tracks and optimizes energy consumption by automatically adjusting lighting, HVAC, and equipment to reduce costs and support sustainability."
+      },
+      "iot-devices": {
+        "title": "IOT Devices in Buildings",
+        "description": "IOT sensors—like smart locks, lights, and thermostats—collect real-time data, enabling precise monitoring, automation, and enhanced building insights."
+      }
+    }
+  },
+  "smartSystems": {
+    "mainTitle": "Our Smart Systems",
+    "mainSubtitle": "Elevate Your Everyday Living",
+    "slides": {
+      "lighting": {
+        "title": "Smart Lighting Control Systems",
+        "description": "Our smart lighting systems let you control all illumination from one point. They save energy by turning lights on when motion is detected and off when rooms are empty. They also boost security by simulating occupancy when you're away.",
+        "buttonText": "Find out more"
+      },
+      "security": {
+        "title": "Smart Security Systems",
+        "description": "Advanced security solutions with real-time monitoring and alerts. Protect your home with intelligent cameras, sensors, and automated responses.",
+        "buttonText": "Learn more"
+      },
+      "climate": {
+        "title": "Climate Control Systems",
+        "description": "Maintain perfect temperature and air quality automatically. Save energy while ensuring maximum comfort throughout your space.",
+        "buttonText": "Explore"
+      }
+    }
+  },
+  "smartSolutions": {
+    "sectionTitle": "Our Smart Solutions",
+    "sectionSubtitle": "Discover the core technologies that make your spaces smarter, safer, and more comfortable",
+    "cards": {
+      "smartHome": {
+        "title": "Smart Home",
+        "description": "Transform Your House Into An Intelligent Living Space With Fully Integrated Control For Lighting, Ac, Curtains, And Entertainment — All At Your Fingertips."
+      },
+      "smartLighting": {
+        "title": "Smart Lighting",
+        "description": "Energy Efficient, Dynamic Lighting Systems That Adapt To Your Lifestyle And Mood. Control Brightness, Ambiance, And Scheduling With Ease."
+      },
+      "motorizedCurtains": {
+        "title": "Motorized Curtains",
+        "description": "Enjoy Effortless Control Of Curtains, Blinds, Garage Doors, And More. One Touch Is All It Takes For Convenience, Privacy, And Comfort."
+      },
+      "smartAccessories": {
+        "title": "Smart Accessories",
+        "description": "Elegant Switches, Sockets, And Cable Inputs Designed With German Precision. Combining Style And Functionality To Complement Your Smart Environment."
+      }
+    }
+  },
+  "lifetechFeatures": {
+    "title": "Smart Solutions",
+    "subtitle": "Advanced technology for modern living",
+    "features": [
+      "It owns more than 160 patents for all products and smart product devices.",
+      "Winner of international awards and certifications in Smart Home System and Smart Solutions.",
+      "Morgen is a leading German manufacturer of smart home products and systems, with all its products 100% quality tested.",
+      "Producing and manufacturing more than 1000 products to meet all cutting-edge smart building and home solutions.",
+      "The ability to connect wired and wireless solutions on the system and with the same user interface, as they are fully controlled from a single interface."
+    ]
+  },
+  "productsShowcase": {
+    "title": "Our Products",
+    "subtitle": "Discover our range of smart home solutions",
+    "buttonText": " All Products"
+  },
+  "smartControl": {
+    "title": "Smart Control",
+    "subtitle": "Take command of your environment",
+    "descriptionParagraphs": [
+      "Experience unparalleled control over your living and working spaces with our advanced smart control systems. Our intuitive interfaces put the power of automation at your fingertips, allowing you to manage lighting, climate, security, and entertainment with ease.",
+      "Whether you're at home or away, our smart control solutions ensure your environment responds to your needs instantly. From scheduling routines to remote access, every aspect of your space becomes effortlessly manageable.",
+      "Our systems integrate seamlessly with all major smart home protocols, providing a unified control experience that simplifies complex technology into elegant, user-friendly interfaces."
+    ]
+  },
+  "cta": {
+    "label": "Contact us",
+    "title": "Ready to Transform Your Space?",
+    "subtitle": "Join thousands of satisfied customers who have upgraded their living and working environments with LifeTech solutions.",
+    "description": "At LifeTech, we don't just provide smart systems, we give you an integrated lifestyle. We are redefining convenience, security, and control with world-class technologies and local expertise. Get in touch with us today, and let your home begin its journey of smart transformation.",
+    "buttonText": "Start Today"
+  },
+  "about": {
+    "title": "About LifeTech",
+    "subtitle": "Leading the way in smart technology solutions",
+    "description": "LifeTech is a pioneering Saudi company at the forefront of smart technology innovation. We specialize in creating intelligent environments that combine cutting-edge technology with intuitive design to enhance both residential and commercial spaces."
+  },
+  "partner": {
+    "hero": {
+      "title": "Become a LifeTech Partner",
+      "subtitle": "Join our network of successful partners and grow your business with cutting-edge smart technology solutions",
+      "buttonText": "Apply Now"
+    },
+    "contactForm": {
+      "title": "Contact Us",
+      "subtitle": "Get in touch with our partnership team",
+      "buttonText": "Send Message"
+    }
+  },
+  "header": {
+    "nav": {
+      "smartHomes": "Smart Homes",
+      "products": "Products",
+      "solutions": "Solutions",
+      "blog": "Blog",
+      "contact": "Contact Us",
+      "bePartner": "Be a Partner",
+      "about": "About Us"
+    },
+    "ctaButton": "know more"
+  },
+  "smartHomes": {
+    "hero": {
+      "title": "Smart Homes",
+      "subtitle": "Explore our range of smart systems designed to enhance comfort, security, and energy efficiency"
+    },
+    "cards": {
+      "soundSystem": {
+        "title": "Sound System Solutions",
+        "description": "Enjoy high-quality audio with seamless integration across your space. Our smart sound systems let you control music in every room with mobile apps or voice commands."
+      },
+      "lighting": {
+        "title": "Lighting Controls",
+        "description": "Transform lighting into a flexible experience. Adjust brightness, scenes, and moods automatically or with a touch—boosting comfort and reducing energy waste."
+      },
+      "climate": {
+        "title": "Climate Control",
+        "description": "Set the perfect temperature effortlessly. Our intelligent HVAC systems adjust based on occupancy, time of day, and weather conditions for maximum comfort and efficiency."
+      },
+      "motor": {
+        "title": "Motor Control",
+        "description": "Automate curtains, blinds, windows, and doors. Schedule them to open or close for convenience, privacy, and security—all controlled by app, panel, or voice."
+      },
+      "security": {
+        "title": "Security System",
+        "description": "Protect your home or business with advanced access control, cameras, and sensors. Receive instant alerts and monitor spaces remotely, anytime and anywhere."
+      },
+      "glass": {
+        "title": "Smart Glass",
+        "description": "Enjoy total control over privacy and natural light. Instantly switch your glass from clear to frosted to create the perfect atmosphere for work, relaxation, or complete seclusion."
+      }
+    }
+  },
+  "products": {
+    "hero": {
+      "title": "Our Products",
+      "subtitle": "Discover advanced smart solutions for homes, buildings, hotels, and hospitals—integrating automation, IoT, and AI to enhance comfort, security, and efficiency."
+    },
+    "sections": {
+      "smartHome": {
+        "title": "Smart Home Products"
+      },
+      "lighting": {
+        "title": "Lighting Products",
+        "filters": {
+          "all": "All",
+          "outdoor": "Outdoor",
+          "indoor": "Indoor",
+          "decorative": "Decorative"
+        }
+      },
+      "cables": {
+        "title": "Cables & Accessories",
+        "filters": {
+          "all": "All",
+          "socket": "Socket",
+          "switch": "Switch"
+        }
+      }
+    },
+    "products": {
+      "remoteControl": {
+        "title": "Remote Control",
+        "description": "Compact, User-Friendly Device For Managing Lighting, Climate, And Other Smart Functions Effortlessly."
+      },
+      "dimmingKnob": {
+        "title": "Dimming Knob",
+        "description": "Smooth, Precise Control For Light Brightness, Adding Comfort And Flexibility To Any Space."
+      },
+      "dimmingRemote": {
+        "title": "Dimming Remote Control",
+        "description": "Wireless Control To Adjust Lighting Levels Instantly, Offering Convenience From Anywhere In The Room."
+      },
+      "lcdPanel": {
+        "title": "LCD Panel",
+        "description": "Elegant Touch Display For Easy Control Of Lighting And Climate Systems."
+      },
+      "smartSwitch": {
+        "title": "Smart Switch",
+        "description": "Modern switch with advanced control features."
+      },
+      "outdoorLight": {
+        "title": "Outdoor Light",
+        "description": "Weather-resistant lighting for gardens and patios."
+      },
+      "decorativeLamp": {
+        "title": "Decorative Lamp",
+        "description": "Stylish lighting to enhance your interior design."
+      },
+      "ceilingLight": {
+        "title": "Ceiling Light",
+        "description": "Modern ceiling light with smart control."
+      },
+      "usbSocket": {
+        "title": "USB Socket",
+        "description": "Modern socket with USB charging ports."
+      }
+    }
+  },
+  "solutions": {
+    "hero": {
+      "title": "Our Solutions",
+      "subtitle": "Discover how Life Tech transforms buildings, homes, hotels, and hospitals into intelligent, efficient, and secure environments."
+    },
+    "cards": {
+      "building": {
+        "title": "Building Solutions",
+        "description": "Transform commercial spaces with intelligent systems that enhance security, energy efficiency, and comfort."
+      },
+      "home": {
+        "title": "Home Solutions",
+        "description": "Bring comfort and luxury to your everyday life with automation, IoT, and AI-powered smart living."
+      },
+      "hotel": {
+        "title": "Hotel Solutions",
+        "description": "Redefine hospitality with technology that delivers unmatched guest comfort, security, and service efficiency."
+      },
+      "hospital": {
+        "title": "Hospital Systems",
+        "description": "Revolutionize healthcare with intelligent solutions that improve patient care, safety, and operational performance."
+      }
+    }
+  },
+  "contactUs": {
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "Let's build smarter spaces together."
+    },
+    "form": {
+      "title": "Get in Touch with Life Tech",
+      "subtitle": "We're here to answer your questions, discuss projects, or help you find the right smart solution.",
+      "buttonText": "Send Message"
+    },
+    "branches": {
+      "riyadh": {
+        "name": "Riyadh Branch",
+        "address": "Riyadh, Al Rabwa District, Al Moarikh Bin Bishr Street",
+        "phones": [
+          "+966 537733222",
+          "+966 503451500",
+          "+966 920010170"
+        ]
+      },
+      "jeddah": {
+        "name": "Jeddah Branch",
+        "address": "Jeddah, Al Hamra District, Palestine Street",
+        "phones": [
+          "+966 503451500",
+          "+966 537733222",
+          "+966 920010170"
+        ]
+      }
+    }
+  },
+  "contactForm": {
+    "labels": {
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "company": "Company",
+      "position": "Position",
+      "city": "City",
+      "phone": "Phone Number",
+      "message": "Message"
+    },
+    "placeholders": {
+      "fullName": "Enter your name",
+      "email": "Enter your email",
+      "company": "Enter your company name",
+      "position": "Enter your position",
+      "city": "Enter your city",
+      "phone": "Enter your phone number",
+      "message": "Enter your Message here"
+    },
+    "errors": {
+      "fullNameRequired": "Full name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email format",
+      "cityRequired": "City is required",
+      "phoneRequired": "Phone number is required",
+      "messageRequired": "Message is required"
+    },
+    "sending": "Sending..."
+  },
+  "blog": {
+    "hero": {
+      "title": "Blogs",
+      "subtitle": "Insights, trends, and tips on smart living & technology."
+    },
+    "section": {
+      "title": "Latest Articles"
+    },
+    "card": {
+      "readTimeLabel": "Read Time",
+      "dateLabel": "Date"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "articles": [
+      {
+        "id": "1",
+        "image": "assets/images/B1.png",
+        "readTime": "5 min read",
+        "date": "15 March 2025",
+        "title": "12 Years of Innovation: How Life Tech Contributed to Shaping the Future of Smart Buildings in Saudi Arabia",
+        "link": "/blog/12-years-innovation"
+      },
+      {
+        "id": "2",
+        "image": "assets/images/B2.png",
+        "readTime": "5 min read",
+        "date": "15 April 2025",
+        "title": "Revolutionizing Comfort: The Latest Trends in Smart Home Automation",
+        "link": "/blog/revolutionizing-comfort"
+      },
+      {
+        "id": "3",
+        "image": "assets/images/B3.png",
+        "readTime": "4 min read",
+        "date": "01 May 2025",
+        "title": "The Rise of AI in Home Security: What You Need to Know",
+        "link": "/blog/ai-home-security"
+      },
+      {
+        "id": "4",
+        "image": "assets/images/B4.png",
+        "readTime": "6 min read",
+        "date": "20 May 2025",
+        "title": "Green Living: How Smart Homes are Paving the Way for Sustainability",
+        "link": "/blog/green-living"
+      },
+      {
+        "id": "5",
+        "image": "assets/images/B5.png",
+        "readTime": "7 min read",
+        "date": "05 June 2025",
+        "title": "Top 5 Must-Have Smart Devices for Your Home in 2025",
+        "link": "/blog/top-5-smart-devices"
+      },
+      {
+        "id": "6",
+        "image": "assets/images/B6.png",
+        "readTime": "7 min read",
+        "date": "15 June 2025",
+        "title": "Beyond Convenience: The Health Benefits of Smart Home Technology",
+        "link": "/blog/health-benefits"
+      },
+      {
+        "id": "7",
+        "image": "assets/images/B7.png",
+        "readTime": "5 min read",
+        "date": "01 July 2025",
+        "title": "Smart Homes and the Internet of Things: A Game Changer for Families",
+        "link": "/blog/iot-game-changer"
+      },
+      {
+        "id": "8",
+        "image": "assets/images/B8.png",
+        "readTime": "6 min read",
+        "date": "20 July 2025",
+        "title": "Future-Proofing Your Home: Integrating Smart Tech for Long-Term Benefit",
+        "link": "/blog/future-proofing"
+      },
+      {
+        "id": "9",
+        "image": "assets/images/B9.png",
+        "readTime": "4 min read",
+        "date": "05 August 2025",
+        "title": "Understanding Smart Home Security: Tips for Protecting Your Space",
+        "link": "/blog/smart-home-security"
+      },
+      {
+        "id": "10",
+        "image": "assets/images/B1.png",
+        "readTime": "5 min read",
+        "date": "20 August 2025",
+        "title": "Voice Control Revolution: How Smart Assistants are Changing Our Homes",
+        "link": "/blog/voice-control"
+      },
+      {
+        "id": "11",
+        "image": "assets/images/B3.png",
+        "readTime": "6 min read",
+        "date": "01 September 2025",
+        "title": "Energy Efficiency: How Smart Thermostats Save Money",
+        "link": "/blog/energy-efficiency"
+      },
+      {
+        "id": "12",
+        "image": "assets/images/B5.png",
+        "readTime": "7 min read",
+        "date": "15 September 2025",
+        "title": "The Future of Smart Kitchens: Technology Meets Culinary Arts",
+        "link": "/blog/smart-kitchens"
+      }
+    ]
+  },
+  "bePartner": {
+    "whyPartner": {
+      "title": "Why Partner with Life Tech?",
+      "features": [
+        {
+          "title": "12+ Years of Experience",
+          "description": "Proven track record in smart building solutions"
+        },
+        {
+          "title": "Trusted Brand",
+          "description": "Strong reputation in Saudi Arabia's market"
+        },
+        {
+          "title": "Cutting-Edge Technology",
+          "description": "Partnerships with global leaders like Moorgen"
+        },
+        {
+          "title": "Growing Market",
+          "description": "Smart homes, hotels, hospitals, and commercial buildings are on the rise"
+        },
+        {
+          "title": "Shared Success",
+          "description": "We grow together by delivering value to clients"
+        }
+      ]
+    },
+    "partners": {
+      "title": "Our Trusted Partners",
+      "description": "We're proud to collaborate with leading global and regional brands that share our vision for smarter, more sustainable environments.",
+      "ariaLabel": "Our trusted partners section"
+    }
+  },
+  "footer": {
+    "companyDescription": "A company specialized in providing advanced products and solutions for buildings, hospitals, hotels, and smart homes in Saudi Arabia using Moorgen's advanced and exclusive products and devices of Smart Life Tech and adoption the technologies and system of the Smart Home System and advanced technology.",
+    "contactUs": "Contact Us",
+    "copyright": "@ All rights reserved to LifeTech",
+    "sections": {
+      "ourWebsite": {
+        "title": "Our website",
+        "links": {
+          "lifeTech": "Life Tech",
+          "smartHomes": "Smart Homes",
+          "products": "Products",
+          "solutions": "Solutions",
+          "blog": "Blog",
+          "contact": "Contact us",
+          "bePartner": "Be a partner",
+          "about": "About us"
+        }
+      },
+      "smartHomes": {
+        "title": "Smart Homes",
+        "links": {
+          "soundSystem": "Sound System Solutions",
+          "lighting": "Lighting Controls",
+          "climate": "Climate Control",
+          "motor": "Motor Control",
+          "security": "Security Systems",
+          "glass": "Smart Glass"
+        }
+      },
+      "ourSolutions": {
+        "title": "Our Solutions",
+        "links": {
+          "building": "Building Solutions",
+          "home": "Home Solutions",
+          "hotel": "Hotel Solutions",
+          "hospital": "Hospital Solutions"
+        }
+      }
+    }
+  }
+}

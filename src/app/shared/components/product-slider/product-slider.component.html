@@ -12,7 +12,7 @@
             class="filter-btn"
             [class.active]="activeFilter === tab.value"
             (click)="setActiveFilter(tab.value)">
-            {{ tab.label }}
+            {{ tab.label | translate }}
           </button>
         </div>
 
@@ -43,8 +43,8 @@
                     <img [src]="product.image" [alt]="product.title" class="product-image">
                   </div>
                   <div class="product-content p-3">
-                    <h3 class="product-title mb-2">{{ product.title }}</h3>
-                    <p class="product-description mb-0">{{ product.description }}</p>
+                    <h3 class="product-title mb-2">{{ product.title | translate }}</h3>
+                    <p class="product-description mb-0">{{ product.description | translate }}</p>
                   </div>
                 </div>
               </div>
