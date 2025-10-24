@@ -1,0 +1,34 @@
+ <app-hero-section
+    [backgroundImage]="'assets/images/contactHero.png'"
+        [title]="'Contact Us'"
+    [subtitle]="'Let’s build smarter spaces together.'"
+    
+  >
+ 
+  </app-hero-section>
+
+  <div class="container">
+        <app-contact-form
+      title="Get in Touch with Life Tech"
+      subtitle="We’re here to answer your questions, discuss projects, or help you find the right smart solution."
+      buttonText="Send Message"
+      [showCompanyField]="false"
+      [showPositionField]="false">
+    </app-contact-form>
+
+    <!-- Riyadh Branch - Normal -->
+      <app-branch-location
+        [branchName]="'Riyadh Branch'"
+        [mapUrl]="'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.123!2d46.738!3d24.713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQyJzQ3LjYiTiA0NsKwNDQnMTYuOCJF!5e0!3m2!1sen!2ssa!4v1234567890'"
+        [contacts]="riyadhContacts"
+        [reverse]="false">
+      </app-branch-location>
+
+      <!-- Jeddah Branch - Reversed -->
+      <app-branch-location
+        [branchName]="'Jeddah Branch'"
+        [mapUrl]="'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.234!2d39.158!3d21.543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDMyJzM0LjgiTiAzOcKwMDknMjguOCJF!5e0!3m2!1sen!2ssa!4v1234567890'"
+        [contacts]="jeddahContacts"
+        [reverse]="true">
+      </app-branch-location>
+  </div>

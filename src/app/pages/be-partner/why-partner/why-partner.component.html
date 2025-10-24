@@ -1,0 +1,16 @@
+<section class="why-partner-section">
+  <div class="container">
+    <!-- Section Title -->
+    <h2 class="section-title text-center">Why Partner with Life Tech?</h2>
+
+    <!-- Features Grid -->
+    <div class="features-grid">
+      <div 
+        *ngFor="let feature of features" 
+        class="feature-card">
+        <h3 class="feature-title">{{ feature.title }}</h3>
+        <p class="feature-description">{{ feature.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

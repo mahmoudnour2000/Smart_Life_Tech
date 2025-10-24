@@ -1,0 +1,184 @@
+ <section class="contact-form-section py-5">
+      <div class="container">
+        <div class="form-wrapper mx-auto">
+          <!-- Header -->
+          <div class="text-center mb-4">
+            <h2 *ngIf="title" class="form-title fw-bold mb-3">{{ title }}</h2>
+            <p *ngIf="subtitle" class="form-subtitle text-muted">{{ subtitle }}</p>
+          </div>
+
+          <!-- Form -->
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="row g-4">
+              <!-- Full Name -->
+              <div class="col-12 col-md-6">
+                <label class="form-label">Full Name</label>
+                <div class="input-group">
+                  <span class="input-icon">
+                    <img [src]="userIcon" alt="user" class="field-icon">
+                  </span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter your name"
+                    formControlName="fullName"
+                    [class.is-invalid]="isFieldInvalid('fullName')">
+                </div>
+                <div *ngIf="isFieldInvalid('fullName')" class="invalid-feedback d-block">
+                  Full name is required
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="col-12 col-md-6">
+                <label class="form-label">Email Address</label>
+                <div class="input-group">
+                  <span class="input-icon">
+                    <img [src]="emailIcon" alt="email" class="field-icon">
+                  </span>
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Enter your email"
+                    formControlName="email"
+                    [class.is-invalid]="isFieldInvalid('email')">
+                </div>
+                <div *ngIf="isFieldInvalid('email')" class="invalid-feedback d-block">
+                  <span *ngIf="contactForm.get('email')?.errors?.['required']">Email is required</span>
+                  <span *ngIf="contactForm.get('email')?.errors?.['email']">Invalid email format</span>
+                </div>
+              </div>
+
+              <!-- Company (Optional) -->
+              <div *ngIf="showCompanyField" class="col-12 col-md-6">
+                <label class="form-label">Company</label>
+                <input
+                  type="text"
+                  class="form-control no-icon"
+                  placeholder="Enter your company name"
+                  formControlName="company">
+              </div>
+
+              <!-- Position (Optional) -->
+              <div *ngIf="showPositionField" class="col-12 col-md-6">
+                <label class="form-label">Position</label>
+                <input
+                  type="text"
+                  class="form-control no-icon"
+                  placeholder="Enter your position"
+                  formControlName="position">
+              </div>
+
+              <!-- City -->
+              <div class="col-12 col-md-6">
+                <label class="form-label">City</label>
+                <div class="input-group">
+                  <span class="input-icon">
+                    <img [src]="locationIcon" alt="location" class="field-icon">
+                  </span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter your city"
+                    formControlName="city"
+                    [class.is-invalid]="isFieldInvalid('city')">
+                </div>
+                <div *ngIf="isFieldInvalid('city')" class="invalid-feedback d-block">
+                  City is required
+                </div>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="col-12 col-md-6">
+                <label class="form-label">Phone Number</label>
+                <div class="phone-input-group">
+                    <select class="country-code" formControlName="countryCode">
+                    <option value="+966">+966</option>
+                    <option value="+20" selected>+20</option>
+                    <option value="+971">+971</option>
+                    <option value="+965">+965</option>
+                    <option value="+973">+973</option>
+                    <option value="+968">+968</option>
+                    <option value="+974">+974</option>
+                  </select>
+                  <div class="input-group flex-grow-1">
+                    <span class="input-icon">
+                      <img [src]="phoneIcon" alt="phone" class="field-icon">
+                    </span>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      placeholder="Enter your phone number"
+                      formControlName="phone"
+                      [class.is-invalid]="isFieldInvalid('phone')">
+                  </div>
+                </div>
+                <div *ngIf="isFieldInvalid('phone')" class="invalid-feedback d-block">
+                  Phone number is required
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div class="col-12">
+                <label class="form-label">Message</label>
+                <div class="input-group">
+                  <span class="input-icon textarea-icon">
+                    <img [src]="messageIcon" alt="message" class="field-icon">
+                  </span>
+                  <textarea
+                    class="form-control"
+                    rows="5"
+                    placeholder="Enter your Message here"
+                    formControlName="message"
+                    [class.is-invalid]="isFieldInvalid('message')">
+                  </textarea>
+                </div>
+                <div *ngIf="isFieldInvalid('message')" class="invalid-feedback d-block">
+                  Message is required
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="col-12 text-center">
+                <button
+                  type="submit"
+                  class="btn btn-submit"
+                  [disabled]="isSubmitting">
+                  <span *ngIf="!isSubmitting">{{ buttonText }}</span>
+                  <span *ngIf="isSubmitting">
+                    <span class="spinner-border spinner-border-sm me-2" role="status"></span>
+                    Sending...
+                  </span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Toast Notification -->
+    <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 9999;">
+      <div 
+        class="toast align-items-center"
+        [class.show]="showToast"
+        [class.toast-success]="toastType === 'success'"
+        [class.toast-error]="toastType === 'error'"
+        role="alert">
+        <div class="d-flex">
+          <div class="toast-body">
+            <svg *ngIf="toastType === 'success'" class="me-2" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <svg *ngIf="toastType === 'error'" class="me-2" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="15" y1="9" x2="9" y2="15"></line>
+              <line x1="9" y1="9" x2="15" y2="15"></line>
+            </svg>
+            {{ toastMessage }}
+          </div>
+          <button type="button" class="btn-close me-2 m-auto" (click)="closeToast()"></button>
+        </div>
+      </div>
+    </div>
