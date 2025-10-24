@@ -2,7 +2,7 @@
       <div class="container">
         <!-- Title (Optional) -->
         <div *ngIf="title" class="text-center mb-5">
-          <h2 class="section-title fw-bold">{{ title }}</h2>
+          <h2 class="section-title fw-bold">{{ 'blog.section.title' | translate }}</h2>
           <p *ngIf="subtitle" class="section-subtitle text-muted">{{ subtitle }}</p>
         </div>
 
@@ -22,12 +22,12 @@
                 <div class="card-content p-4">
                   <!-- Meta Info -->
                   <div class="card-meta d-flex justify-content-between mb-3">
-                    <span class="read-time">{{ card.readTime }}</span>
-                    <span class="date">{{ card.date }}</span>
+                    <span class="read-time">{{ 'blog.card.readTimeLabel' | translate }}: {{ card.readTime | translate }}</span>
+                    <span class="date">{{ 'blog.card.dateLabel' | translate }}: {{ card.date | translate }}</span>
                   </div>
 
                   <!-- Title -->
-                  <h3 class="card-title">{{ card.title }}</h3>
+                  <h3 class="card-title">{{ card.title | translate }}</h3>
                 </div>
               </div>
             </a>
@@ -41,7 +41,7 @@
             class="pagination-btn pagination-text"
             (click)="goToPage(currentPage - 1)"
             [disabled]="currentPage === 1">
-            Previous
+            {{ 'blog.pagination.previous' | translate }}
           </button>
 
           <!-- Page Numbers -->
@@ -60,7 +60,7 @@
             class="pagination-btn pagination-text"
             (click)="goToPage(currentPage + 1)"
             [disabled]="currentPage === totalPages">
-            Next
+            {{ 'blog.pagination.next' | translate }}
           </button>
         </div>
       </div>

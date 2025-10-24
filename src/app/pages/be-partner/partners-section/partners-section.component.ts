@@ -1,10 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Partner } from '../../../core/models/partner';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-partners-section',
-  imports:[CommonModule],
+  imports:[CommonModule, TranslateModule],
   templateUrl: './partners-section.component.html',
   styleUrls: ['./partners-section.component.css']
 })
@@ -12,7 +13,7 @@ export class PartnersSectionComponent implements OnInit {
 
    @Input() title: string = 'Our Trusted Partners';
   @Input() description: string = "We're proud to collaborate with leading global and regional brands that share our vision for smarter, more sustainable environments.";
-  @Input() ariaLabel: string = 'Our trusted partners section';
+  @Input() ariaLabel: string = 'bePartner.partners.ariaLabel';
   @Input() autoPlaySpeed: number = 30; // pixels per second
   
   @Input() partners: Partner[] = [

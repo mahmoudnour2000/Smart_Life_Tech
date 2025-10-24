@@ -1,8 +1,8 @@
 <div class="smart-systems-container">
   <!-- Header Section -->
   <div class="header-section text-center">
-    <h1 class="main-title">Our Smart Systems</h1>
-    <p class="main-subtitle">Elevate Your Everyday Living</p>
+    <h1 class="main-title">{{ 'smartSystems.mainTitle' | translate }}</h1>
+    <p class="main-subtitle">{{ 'smartSystems.mainSubtitle' | translate }}</p>
   </div>
 
   <!-- Slider Section -->
@@ -15,11 +15,11 @@
 
       <!-- Content -->
       <div class="slide-content">
-        <h2 class="slide-title">{{ currentSlide.title }}</h2>
-        <p class="slide-description">{{ currentSlide.description }}</p>
-        
-        <app-button 
-          [text]="currentSlide.buttonText"
+        <h2 class="slide-title">{{ currentSlide.title | translate }}</h2>
+        <p class="slide-description">{{ currentSlide.description | translate }}</p>
+
+        <app-button
+          [text]="currentSlide.buttonText | translate"
           [route]="currentSlide.buttonRoute"
           [variant]="'primary'"
         ></app-button>

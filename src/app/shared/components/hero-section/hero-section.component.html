@@ -6,7 +6,7 @@
       <div class="hero-content">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-lg-10 col-xl-9 text-center">
+            <div class="col-12 text-center">
               <h1 class="hero-title" [id]="'hero-title'">{{ title }}</h1>
 
               <!-- small subtitle line (distinct font/style) -->
@@ -15,10 +15,10 @@
               <!-- longer description paragraph under the subtitle -->
               <p class="hero-description" *ngIf="description">{{ description }}</p>
 
-              <app-button 
+              <app-button
                           *ngIf="showButton"
-                [text]="buttonText" 
-                [route]="buttonRoute" 
+                [text]="buttonText"
+                [route]="buttonRoute"
                 [variant]="'secondary'">
               </app-button>
             </div>

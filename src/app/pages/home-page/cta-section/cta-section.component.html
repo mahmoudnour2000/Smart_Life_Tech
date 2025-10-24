@@ -11,18 +11,21 @@
           <div class="col-12 col-lg-10 col-xl-9">
             <div class="text-center text-white">
               <!-- Label -->
-              <p *ngIf="label" class="cta-label mb-3">{{ label }}</p>
+              <p *ngIf="label" class="cta-label mb-3">{{ 'cta.label' | translate }}</p>
 
               <!-- Title -->
-              <h2 *ngIf="title" class="cta-title fw-bold mb-4">{{ title }}</h2>
+              <h2 *ngIf="title" class="cta-title fw-bold mb-4">{{ 'cta.title' | translate }}</h2>
+
+              <!-- Subtitle -->
+              <p *ngIf="subtitle" class="cta-subtitle mb-4">{{ 'cta.subtitle' | translate }}</p>
 
               <!-- Description -->
-              <p *ngIf="description" class="cta-description mb-4">{{ description }}</p>
+              <p *ngIf="description" class="cta-description mb-4">{{ 'cta.description' | translate }}</p>
 
               <!-- Button -->
               <div *ngIf="showButton" class="mt-4">
                 <app-button
-                  [text]="buttonText"
+                  [text]="'cta.buttonText' | translate"
                   [route]="buttonRoute"
                   [variant]="buttonVariant"
                   [title]="buttonTitle">

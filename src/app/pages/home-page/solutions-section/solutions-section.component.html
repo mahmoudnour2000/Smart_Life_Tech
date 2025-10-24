@@ -3,8 +3,8 @@
         <!-- Title Section -->
         <div class="row mb-5">
           <div class="col-12 text-center">
-            <h2 class="section-title">{{ title }}</h2>
-            <p class="section-subtitle">{{ subtitle }}</p>
+            <h2 class="section-title">{{ 'Solutions.title' | translate }}</h2>
+            <p class="section-subtitle">{{ 'Solutions.subtitle' | translate }}</p>
           </div>
         </div>
 
@@ -18,11 +18,11 @@
                 width="20"
                 height="20"
               />
-              <h3 class="card-title">{{ card.title }}</h3>
-              <p class="card-description">{{ card.description }}</p>
-              <app-button 
-                [text]="buttonText" 
-                [route]="buttonRoute + '/' + card.id"
+              <h3 class="card-title">{{ card.title | translate }}</h3>
+              <p class="card-description">{{ card.description | translate }}</p>
+              <app-button
+                [text]="'Solutions.buttonText' | translate"
+                [route]="'/solutions/' + card.id"
                 [variant]="'primary'"
                 [ariaLabel]="'Learn more about ' + card.title">
               </app-button>

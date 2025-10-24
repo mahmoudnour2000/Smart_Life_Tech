@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { PartnerFeature } from '../../../core/models/partner';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-why-partner',
-  imports:[CommonModule],
+  imports:[CommonModule, TranslateModule],
   templateUrl: './why-partner.component.html',
   styleUrls: ['./why-partner.component.css']
 })
@@ -16,24 +17,24 @@ export class WhyPartnerComponent implements OnInit {
   }
  features: PartnerFeature[] = [
     {
-      title: '12+ Years of Experience',
-      description: 'Proven track record in smart building solutions'
+      title: 'bePartner.whyPartner.features.0.title',
+      description: 'bePartner.whyPartner.features.0.description'
     },
     {
-      title: 'Trusted Brand',
-      description: 'Strong reputation in Saudi Arabia\'s market'
+      title: 'bePartner.whyPartner.features.1.title',
+      description: 'bePartner.whyPartner.features.1.description'
     },
     {
-      title: 'Cutting-Edge Technology',
-      description: 'Partnerships with global leaders like Moorgen'
+      title: 'bePartner.whyPartner.features.2.title',
+      description: 'bePartner.whyPartner.features.2.description'
     },
     {
-      title: 'Growing Market',
-      description: 'Smart homes, hotels, hospitals, and commercial buildings are on the rise'
+      title: 'bePartner.whyPartner.features.3.title',
+      description: 'bePartner.whyPartner.features.3.description'
     },
     {
-      title: 'Shared Success',
-      description: 'We grow together by delivering value to clients'
+      title: 'bePartner.whyPartner.features.4.title',
+      description: 'bePartner.whyPartner.features.4.description'
     }
   ];
 }

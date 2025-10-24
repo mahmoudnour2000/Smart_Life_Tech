@@ -1,16 +1,14 @@
 <app-hero-section
   [backgroundImage]="'assets/images/productsPage.png'"
-  [title]="'Our Products'"
-  [subtitle]="
-    'Discover advanced smart solutions for homes, buildings, hotels, and hospitals—integrating automation, IoT, and AI to enhance comfort, security, and efficiency.'
-  "
+  [title]="'products.hero.title' | translate"
+  [subtitle]="'products.hero.subtitle' | translate"
 >
 </app-hero-section>
 
 <div class="container">
-  <!-- Section 1: Smart Home Products - بدون فلترة -->
+    <!-- Section 1: Smart Home Products - بدون فلترة -->
     <app-product-slider
-      title="Smart Home Products"
+      [title]="'products.sections.smartHome.title' | translate"
       [products]="smartHomeProducts"
       [showFilters]="false"
       [showDots]="true">
@@ -18,7 +16,7 @@
 
     <!-- Section 2: Lighting Products - مع فلترة -->
     <app-product-slider
-      title="Lighting products"
+      [title]="'products.sections.lighting.title' | translate"
       [products]="lightingProducts"
       [filterTabs]="lightingFilters"
       [showFilters]="true"
@@ -27,7 +25,7 @@
 
     <!-- Section 3: Cables & Accessories - مع فلترة -->
     <app-product-slider
-      title="cables & accessories"
+      [title]="'products.sections.cables.title' | translate"
       [products]="cablesProducts"
       [filterTabs]="cablesFilters"
       [showFilters]="true"

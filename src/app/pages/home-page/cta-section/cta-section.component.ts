@@ -1,16 +1,18 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ButtonComponent } from "../../../shared/components/button/button.component";
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-cta-section',
   templateUrl: './cta-section.component.html',
   styleUrls: ['./cta-section.component.css'],
-  imports: [ButtonComponent,CommonModule]
+  imports: [ButtonComponent,CommonModule, TranslateModule]
 })
 export class CtaSectionComponent implements OnInit {
 @Input() label?: string='Contact us';
   @Input() title?: string= 'Start your journey towards smart living';
+  @Input() subtitle?: string;
   @Input() description?: string='At LifeTech, we don\'t just provide smart systems, we give you an integrated lifestyle. We are redefining convenience, security, and control with world-class technologies and local expertise. Get in touch with us today, and let your home begin its journey of smart transformation.';
   @Input() backgroundImage?: string= 'assets/images/cta.png';
   @Input() showButton: boolean = true;

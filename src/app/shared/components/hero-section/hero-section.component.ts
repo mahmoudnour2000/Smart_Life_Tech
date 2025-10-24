@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-hero-section',
-    imports: [CommonModule, ButtonComponent],
+    imports: [CommonModule, ButtonComponent, TranslateModule],
 
   templateUrl: './hero-section.component.html',
   styleUrls: ['./hero-section.component.css']

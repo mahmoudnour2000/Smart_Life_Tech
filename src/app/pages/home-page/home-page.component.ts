@@ -10,38 +10,34 @@ import { LifetechFeaturesComponent } from "./lifetech-features/lifetech-features
 import { ProductsShowcaseComponent } from "./products-showcase/products-showcase.component";
 import { SmartControlComponent } from "./smart-control/smart-control.component";
 import { CtaSectionComponent } from "./cta-section/cta-section.component";
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.css'],
-  imports: [HeroSectionComponent, LifestyleSectionComponent, SolutionsSectionComponent, AboutSectionComponent, SmartSystemsComponent, GridCardsComponent, LifetechFeaturesComponent, ProductsShowcaseComponent, SmartControlComponent, CtaSectionComponent]
+  imports: [HeroSectionComponent, LifestyleSectionComponent, SolutionsSectionComponent, AboutSectionComponent, SmartSystemsComponent, GridCardsComponent, LifetechFeaturesComponent, ProductsShowcaseComponent, SmartControlComponent, CtaSectionComponent, TranslateModule]
 })
 export class HomePageComponent implements OnInit {
-  heroSubtitle = `Your World, Transformed – Experience the Future of Smart Living
-
-Welcome to Life Tech, where innovation meets intuition to engineer your perfect mood and transform your world. As a leading Saudi company specializing in cutting-edge smart technologies, we're dedicated to crafting intelligent living and working environments that anticipate your every need and exceed your expectations. Forget just smart homes; we create an intelligent life designed to make your daily existence easier, more comfortable, and truly extraordinary.`;
-
-
-smartSolutions: GridCards[] = [
+  smartSolutions: GridCards[] = [
     {
-      title: 'Smart Home',
-      description: 'Transform Your House Into An Intelligent Living Space With Fully Integrated Control For Lighting, Ac, Curtains, And Entertainment — All At Your Fingertips.',
+      title: 'smartSolutions.cards.smartHome.title',
+      description: 'smartSolutions.cards.smartHome.description',
       image: 'assets/images/smarthome.png'
     },
     {
-      title: 'Smart Lighting',
-      description: 'Energy Efficient, Dynamic Lighting Systems That Adapt To Your Lifestyle And Mood. Control Brightness, Ambiance, And Scheduling With Ease.',
+      title: 'smartSolutions.cards.smartLighting.title',
+      description: 'smartSolutions.cards.smartLighting.description',
       image: 'assets/images/smartlight.png'
     },
     {
-      title: 'Motorized Curtains',
-      description: 'Enjoy Effortless Control Of Curtains, Blinds, Garage Doors, And More. One Touch Is All It Takes For Convenience, Privacy, And Comfort.',
+      title: 'smartSolutions.cards.motorizedCurtains.title',
+      description: 'smartSolutions.cards.motorizedCurtains.description',
       image: 'assets/images/motorized.png'
     },
     {
-      title: 'Smart Accessories',
-      description: 'Elegant Switches, Sockets, And Cable Inputs Designed With German Precision. Combining Style And Functionality To Complement Your Smart Environment.',
+      title: 'smartSolutions.cards.smartAccessories.title',
+      description: 'smartSolutions.cards.smartAccessories.description',
       image: 'assets/images/smartaccessories.png'
     }
   ];

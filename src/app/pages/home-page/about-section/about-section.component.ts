@@ -1,10 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about-section',
   templateUrl: './about-section.component.html',
-  styleUrls: ['./about-section.component.css']
+  styleUrls: ['./about-section.component.css'],
+  imports: [TranslateModule]
 })
 export class AboutSectionComponent  {
 

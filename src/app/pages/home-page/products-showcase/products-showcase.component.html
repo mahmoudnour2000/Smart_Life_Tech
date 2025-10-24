@@ -2,8 +2,8 @@
       <div class="container">
         <!-- Header -->
         <div class="text-center mb-5">
-          <h2 *ngIf="title" class="fw-bold mb-3">{{ title }}</h2>
-          <p *ngIf="subtitle" class="text-muted subtitle">{{ subtitle }}</p>
+          <h2 *ngIf="title" class="fw-bold mb-3">{{ 'productsShowcase.title' | translate }}</h2>
+          <p *ngIf="subtitle" class="text-muted subtitle">{{ 'productsShowcase.subtitle' | translate }}</p>
         </div>
 
         <!-- Products Grid -->
@@ -21,7 +21,7 @@
         <!-- Button -->
         <div *ngIf="showButton" class="text-center">
           <app-button
-            [text]="buttonText"
+            [text]="'productsShowcase.buttonText' | translate"
             [route]="buttonRoute"
             [variant]="buttonVariant"
             [title]="buttonTitle">

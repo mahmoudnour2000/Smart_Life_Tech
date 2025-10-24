@@ -2,7 +2,7 @@
       <div class="container">
         <!-- Title -->
         <div class="text-center mb-5">
-          <h2 *ngIf="title" class="fw-bold section-title">{{ title }}</h2>
+          <h2 *ngIf="title" class="fw-bold section-title">{{ 'smartControl.title' | translate }}</h2>
         </div>
 
         <!-- Content Row -->
@@ -19,8 +19,8 @@
             <div class="content-wrapper">
               <!-- Description Paragraphs -->
               <div class="description-text mb-4">
-                <p *ngFor="let paragraph of descriptionParagraphs" class="mb-3">
-                  {{ paragraph }}
+                <p *ngFor="let paragraph of descriptionParagraphs; let i = index" class="mb-3">
+                  {{ 'smartControl.descriptionParagraphs.' + (++i) | translate }}
                 </p>
               </div>
 

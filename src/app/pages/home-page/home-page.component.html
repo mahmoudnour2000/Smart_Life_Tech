@@ -1,9 +1,10 @@
 <main id="main-content" role="main">
   <app-hero-section
     [backgroundImage]="'assets/images/homeHero.png'"
-    [title]="'LifeTech'"
-    [subtitle]="heroSubtitle"
-    [buttonText]="'Learn More'"
+    [title]="'hero.title' | translate"
+    [subtitle]="'hero.subtitle' | translate"
+    [description]="'hero.description' | translate"
+    [buttonText]="'hero.buttonText' | translate"
     [buttonRoute]="'/learn-more'"
     [showButton]="true"
     [ariaLabel]="'LifeTech hero section - Smart Living Solutions'"
@@ -19,8 +20,8 @@
   <app-smart-systems></app-smart-systems>
   <app-grid-cards
     [cards]="smartSolutions"
-    sectionTitle="Our Smart Solutions"
-    sectionSubtitle="Discover the core technologies that make your spaces smarter, safer, and more comfortable"
+    [sectionTitle]="'smartSolutions.sectionTitle' | translate"
+    [sectionSubtitle]="'smartSolutions.sectionSubtitle' | translate"
   >
   </app-grid-cards>
   <app-lifetech-features></app-lifetech-features>

@@ -1,8 +1,8 @@
- <app-hero-section
+  <app-hero-section
     [backgroundImage]="'assets/images/partner-hero.png'"
-        [title]="'Be a Partner'"
-    [subtitle]="'Together, we can create smarter, more sustainable environments across Saudi Arabia and beyond.'"
-    
+        [title]="'partner.hero.title' | translate"
+    [subtitle]="'partner.hero.subtitle' | translate"
+    [buttonText]="'partner.hero.buttonText' | translate"
   >
  
   </app-hero-section>
@@ -12,9 +12,9 @@
 <app-partners-section></app-partners-section>
   <div class="container">
       <app-contact-form
-      title="Ready to start a partnership with Life Tech"
-      subtitle="Fill out the form below and let’s shape the future together."
-      buttonText="Send Message"
+      [title]="'partner.contactForm.title' | translate"
+      [subtitle]="'partner.contactForm.subtitle' | translate"
+      [buttonText]="'partner.contactForm.buttonText' | translate"
     >
     </app-contact-form>
   </div>

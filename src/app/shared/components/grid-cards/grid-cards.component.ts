@@ -1,10 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { GridCards } from '../../../core/models/home-sections';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-grid-cards',
-    imports: [CommonModule],
+    imports: [CommonModule, TranslateModule],
   templateUrl: './grid-cards.component.html',
   styleUrls: ['./grid-cards.component.css']
 })

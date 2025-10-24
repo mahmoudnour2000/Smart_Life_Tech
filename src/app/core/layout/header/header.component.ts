@@ -3,11 +3,12 @@ import { Component, Input, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ButtonComponent } from '../../../shared/components/button/button.component';
 import { NavItem } from '../../models/layout';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-header',
-    imports: [CommonModule, RouterModule, ButtonComponent],
+    imports: [CommonModule, RouterModule, ButtonComponent, TranslateModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
@@ -19,13 +20,13 @@ export class HeaderComponent implements OnInit {
   @Input() logoRoute: string = '/';
   
   @Input() navItems: NavItem[] = [
-    { label: 'Smart Homes', route: '/smart-homes'},
-    { label: 'Products', route: '/products' },
-    { label: 'Solutions', route: '/solutions'},
-    { label: 'Blog', route: '/blog' },
-    { label: 'Contact Us', route: '/contact' },
-    { label: 'Be a Partner', route: '/partner'},
-    { label: 'About Us', route: '/about' }
+    { label: 'smartHomes', route: '/smart-homes'},
+    { label: 'products', route: '/products' },
+    { label: 'solutions', route: '/solutions'},
+    { label: 'blog', route: '/blog' },
+    { label: 'contact', route: '/contact' },
+    { label: 'bePartner', route: '/partner'},
+    { label: 'about', route: '/about' }
   ];
 
   @Input() ctaButtonText: string = 'know more';

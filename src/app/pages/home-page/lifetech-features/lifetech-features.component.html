@@ -2,8 +2,8 @@
       <div class="container">
         <!-- Header -->
         <div class="text-center mb-5">
-          <h2 *ngIf="title" class="fw-bold mb-3">{{ title }}</h2>
-          <p *ngIf="subtitle" class="text-muted subtitle">{{ subtitle }}</p>
+          <h2 *ngIf="title" class="fw-bold mb-3">{{ 'lifetechFeatures.title' | translate }}</h2>
+          <p *ngIf="subtitle" class="text-muted subtitle">{{ 'lifetechFeatures.subtitle' | translate }}</p>
         </div>
 
         <!-- Content Row -->
@@ -19,8 +19,8 @@
           <div class="col-12 col-lg-7" [class.order-lg-1]="imagePosition === 'right'">
             <div class="features-card p-4 p-md-5">
               <ul class="features-list mb-0">
-                <li *ngFor="let feature of features" class="feature-item">
-                  {{ feature.text }}
+                <li *ngFor="let feature of features;  let i = index" class="feature-item">
+                  {{ 'lifetechFeatures.features.'+(++i) | translate }}
                 </li>
               </ul>
             </div>

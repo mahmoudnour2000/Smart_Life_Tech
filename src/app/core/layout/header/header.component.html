@@ -33,14 +33,14 @@
                     [routerLinkActiveOptions]="{ exact: true }"
                     [title]="item.label"
                     role="menuitem">
-                    {{ item.label }}
+                    {{ 'header.nav.' + item.label | translate }}
                   </a>
                 </li>
               </ul>
               
-              <app-button 
-                [text]="ctaButtonText" 
-                [route]="ctaButtonRoute" 
+              <app-button
+                [text]="'header.ctaButton' | translate"
+                [route]="ctaButtonRoute"
                 [variant]="'primary'">
               </app-button>
             </div>

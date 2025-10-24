@@ -2,10 +2,11 @@ import { Component, Input, OnInit } from '@angular/core';
 import { BlogCard } from '../../../core/models/blogs';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-blog-cards',
-    imports: [CommonModule, RouterModule],
+    imports: [CommonModule, RouterModule, TranslateModule],
   templateUrl: './blog-cards.component.html',
   styleUrls: ['./blog-cards.component.css']
 })

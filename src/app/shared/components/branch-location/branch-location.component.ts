@@ -2,10 +2,11 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ContactLocation } from '../../../core/models/contact-form';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-branch-location',
-    imports: [CommonModule],
+    imports: [CommonModule, TranslateModule],
   templateUrl: './branch-location.component.html',
   styleUrls: ['./branch-location.component.css']
 })
