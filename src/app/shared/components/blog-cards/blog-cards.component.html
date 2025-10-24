@@ -1,0 +1,67 @@
+<section class="blog-cards-section py-5">
+      <div class="container">
+        <!-- Title (Optional) -->
+        <div *ngIf="title" class="text-center mb-5">
+          <h2 class="section-title fw-bold">{{ title }}</h2>
+          <p *ngIf="subtitle" class="section-subtitle text-muted">{{ subtitle }}</p>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="row g-4">
+          <div 
+            *ngFor="let card of paginatedCards" 
+            class="col-12 col-md-6 col-lg-4">
+            <a [routerLink]="card.link" class="blog-card-link">
+              <div class="blog-card h-100">
+                <!-- Image -->
+                <div class="card-image-container">
+                  <img [src]="card.image" [alt]="card.title" class="card-image">
+                </div>
+
+                <!-- Content -->
+                <div class="card-content p-4">
+                  <!-- Meta Info -->
+                  <div class="card-meta d-flex justify-content-between mb-3">
+                    <span class="read-time">{{ card.readTime }}</span>
+                    <span class="date">{{ card.date }}</span>
+                  </div>
+
+                  <!-- Title -->
+                  <h3 class="card-title">{{ card.title }}</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Pagination (Only show if more than 9 cards) -->
+        <div *ngIf="totalCards > cardsPerPage" class="pagination-container d-flex justify-content-center align-items-center gap-2 mt-5">
+          <!-- Previous Button -->
+          <button
+            class="pagination-btn pagination-text"
+            (click)="goToPage(currentPage - 1)"
+            [disabled]="currentPage === 1">
+            Previous
+          </button>
+
+          <!-- Page Numbers -->
+          <button
+            *ngFor="let page of visiblePages"
+            class="pagination-btn pagination-number"
+            [class.active]="page === currentPage"
+            [class.dots]="page === -1"
+            [disabled]="page === -1"
+            (click)="page !== -1 && goToPage(page)">
+            {{ page === -1 ? '...' : page }}
+          </button>
+
+          <!-- Next Button -->
+          <button
+            class="pagination-btn pagination-text"
+            (click)="goToPage(currentPage + 1)"
+            [disabled]="currentPage === totalPages">
+            Next
+          </button>
+        </div>
+      </div>
+    </section>

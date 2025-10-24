@@ -1,0 +1,52 @@
+ <section class="branch-section" [class.reverse]="reverse">
+      <div class="container-fluid px-4">
+        <div class="row align-items-center g-4">
+          <!-- Branch Info -->
+          <div class="col-lg-6" [class.order-lg-2]="reverse">
+            <div class="branch-info">
+              <h2 class="branch-title">{{ branchName }}</h2>
+              
+              <div class="contact-list">
+                <div 
+                  class="contact-item" 
+                  *ngFor="let contact of contacts"
+                  [class.has-link]="contact.type === 'phone'">
+                  <div class="contact-icon">
+<img 
+  [src]="contact.iconImage" 
+  [alt]="contact.iconAlt"
+  class="icon-image">                  </div>
+                  <a 
+                    *ngIf="contact.type === 'phone' && contact.link"
+                    [href]="contact.link"
+                    class="contact-text"
+                    [attr.aria-label]="'Call ' + contact.text">
+                    {{ contact.text }}
+                  </a>
+                  <span 
+                    *ngIf="contact.type !== 'phone' || !contact.link"
+                    class="contact-text">
+                    {{ contact.text }}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="col-lg-6" [class.order-lg-1]="reverse">
+            <div class="map-container">
+              <iframe
+                [src]="safeMapUrl"
+                [title]="branchName + ' location map'"
+                frameborder="0"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="map-iframe">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

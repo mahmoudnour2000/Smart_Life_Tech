@@ -1,0 +1,151 @@
+.why-partner-section {
+  padding: 4rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 3rem;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Feature Card */
+.feature-card {
+  background-color: #F4F4FA;
+  padding: 2rem 1.75rem;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Specific card in second row */
+.features-grid .feature-card:nth-child(4),
+.features-grid .feature-card:nth-child(5) {
+  grid-column: span 1;
+}
+
+/* Center the last two cards */
+.features-grid .feature-card:nth-child(4) {
+  margin-left: auto;
+  margin-right: 0.75rem;
+}
+
+.features-grid .feature-card:nth-child(5) {
+  margin-right: auto;
+  margin-left: 0.75rem;
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.75rem;
+}
+
+.feature-description {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .features-grid .feature-card:nth-child(4),
+  .features-grid .feature-card:nth-child(5) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .features-grid .feature-card:nth-child(5) {
+    grid-column: span 2;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-partner-section {
+    padding: 3rem 0;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .features-grid .feature-card:nth-child(5) {
+    grid-column: span 1;
+    max-width: 100%;
+  }
+
+  .feature-title {
+    font-size: 1.15rem;
+  }
+
+  .feature-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .why-partner-section {
+    padding: 2.5rem 0;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .feature-card {
+    padding: 1.25rem;
+  }
+
+  .feature-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .feature-description {
+    font-size: 0.875rem;
+  }
+}

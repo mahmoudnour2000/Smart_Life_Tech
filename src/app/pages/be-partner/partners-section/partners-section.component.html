@@ -1,0 +1,43 @@
+<section class="partners-section" [attr.aria-label]="ariaLabel">
+      <div class="container-fluid px-4">
+        <!-- Title Section -->
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="section-title">{{ title }}</h2>
+            <p class="section-description">{{ description }}</p>
+          </div>
+        </div>
+
+        <!-- Partners Slider -->
+        <div class="row">
+          <div class="col-12">
+            <div class="partners-slider-container">
+              <div 
+                class="partners-slider" 
+                [style.transform]="'translateX(-' + currentPosition + 'px)'"
+                (mouseenter)="pauseAutoPlay()"
+                (mouseleave)="resumeAutoPlay()">
+                <!-- Original partners -->
+                <div class="partner-card" *ngFor="let partner of partners">
+                  <img 
+                    [src]="partner.logo" 
+                    [alt]="partner.name + ' logo'"
+                    [title]="partner.name"
+                    class="partner-logo"
+                    loading="lazy">
+                </div>
+                <!-- Duplicated partners for infinite loop -->
+                <div class="partner-card" *ngFor="let partner of partners">
+                  <img 
+                    [src]="partner.logo" 
+                    [alt]="partner.name + ' logo'"
+                    [title]="partner.name"
+                    class="partner-logo"
+                    loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

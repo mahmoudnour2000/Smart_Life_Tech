@@ -1,0 +1,205 @@
+
+
+    .form-wrapper {
+      /* margin-top: 50px; */
+      background: linear-gradient(135deg, #E8E8F5 0%, #F0F0F8 100%);
+      border-radius: 30px;
+      padding: 3rem;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    }
+ .form-title {
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .form-subtitle {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .form-label {
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      
+    }
+
+    .input-group {
+      position: relative;
+    }
+
+    .input-icon {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .field-icon {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+
+    .textarea-icon {
+      top: 15px;
+      transform: none;
+    }
+
+    .form-control {
+      background-color: #fff;
+      border: 1px solid #E8E8ED;
+      border-radius: 12px !important;
+      padding: 12px 15px 12px 45px;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    .form-control.no-icon {
+      padding: 12px 15px;
+            border-radius: 12px !important;
+
+    }
+
+    textarea.form-control {
+      resize: none;
+      min-height: 120px;
+            border-radius: 12px !important;
+
+    }
+
+    .form-control:focus {
+      border-color: #8B7FC4;
+      box-shadow: 0 0 0 3px rgba(139, 127, 196, 0.1);
+      background-color: #fff;
+    }
+
+    .form-control::placeholder {
+      color: #bbb;
+    }
+
+    /* Phone Input */
+    .phone-input-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .country-code {
+      width: 90px;
+      background-color: #fff;
+      border: 1px solid #E8E8ED;
+      border-radius: 12px;
+      padding: 12px 10px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .country-code:focus {
+      border-color: #8B7FC4;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(139, 127, 196, 0.1);
+    }
+
+    /* Submit Button */
+    .btn-submit {
+      background: linear-gradient(135deg, #8B7FC4 0%, #A89FD4 100%);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 14px 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(139, 127, 196, 0.3);
+      min-width: 180px;
+    }
+
+    .btn-submit:hover:not(:disabled) {
+      background: linear-gradient(135deg, #7A6EB3 0%, #9788C3 100%);
+      box-shadow: 0 6px 20px rgba(139, 127, 196, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .btn-submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    /* Validation */
+    .form-control.is-invalid {
+      border-color: #dc3545;
+    }
+
+    .invalid-feedback {
+      color: #dc3545;
+      font-size: 0.875rem;
+      margin-top: 0.25rem;
+    }
+
+    /* Toast Notifications */
+    .toast {
+      background-color: #fff;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      min-width: 300px;
+    }
+
+    .toast-success {
+      border-left: 4px solid #28a745;
+    }
+
+    .toast-error {
+      border-left: 4px solid #dc3545;
+    }
+
+    .toast-body {
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .toast-success svg {
+      stroke: #28a745;
+    }
+
+    .toast-error svg {
+      stroke: #dc3545;
+    }
+
+    /* Responsive */
+    @media (max-width: 767px) {
+      .form-wrapper {
+        padding: 2rem 1.5rem;
+      }
+
+      .form-title {
+        font-size: 1.5rem;
+      }
+
+      .form-subtitle {
+        font-size: 0.9rem;
+      }
+
+      .btn-submit {
+        width: 100%;
+        padding: 12px 30px;
+      }
+
+      .phone-input-group {
+        flex-direction: column;
+      }
+
+      .country-code {
+        width: 100%;
+      }
+    }
