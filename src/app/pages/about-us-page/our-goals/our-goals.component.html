@@ -1,0 +1,25 @@
+<section class="goals-section">
+  <div class="container">
+    <!-- Section Title -->
+    <h2 class="section-title text-center">{{ 'aboutUs.goals.title' | translate }}</h2>
+
+    <div class="goals-content">
+      <!-- Goals List (Left Side) -->
+      <div class="goals-list">
+        <div
+          *ngFor="let goal of ['aboutUs.goals.items.0', 'aboutUs.goals.items.1', 'aboutUs.goals.items.2', 'aboutUs.goals.items.3']; let i = index"
+          class="goal-item">
+          <div class="goal-icon-wrapper">
+            <img src="assets/images/goals-icon.png" [alt]="'Goal icon'" class="goal-icon">
+          </div>
+          <p class="goal-text">{{ goal | translate }}</p>
+        </div>
+      </div>
+
+      <!-- Main Image (Right Side) -->
+      <div class="goals-image">
+        <img [src]="mainImage" [alt]="mainImageAlt" class="main-image">
+      </div>
+    </div>
+  </div>
+</section>

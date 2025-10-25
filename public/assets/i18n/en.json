@@ -111,7 +111,7 @@
   },
   "partner": {
     "hero": {
-      "title": "Become a LifeTech Partner",
+      "title": "Be a Partner",
       "subtitle": "Join our network of successful partners and grow your business with cutting-edge smart technology solutions",
       "buttonText": "Apply Now"
     },
@@ -123,6 +123,7 @@
   },
   "header": {
     "nav": {
+          "home":"Home",
       "smartHomes": "Smart Homes",
       "products": "Products",
       "solutions": "Solutions",
@@ -501,5 +502,116 @@
         }
       }
     }
+  },
+  "aboutUs": {
+    "hero": {
+      "title": "About Us",
+      "buttonText": "Download Company Profile"
+    },
+    "paragraph": {
+      "title": "About Us",
+      "mainDescription": "Smart Life Tech is a Saudi company specialized in smart technologies. Our team of experts uses the latest innovations to deliver high-quality control and management systems for government buildings, commercial spaces, and private homes.",
+      "solutionsDescription": "Our solutions empower you to manage security, lighting, HVAC, motorized systems (curtains, garages...), entertainment devices, and electrical appliances — all with simple, intuitive tools.",
+      "quote": "\" We don't just sell smart home or building technology; we create intelligent lifestyles designed to meet your needs and exceed expectations — making life easier! \""
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be the leading provider and exclusive installer of smart building and smart home solutions across Saudi Arabia."
+    },
+    "goals": {
+      "title": "Our Goals",
+      "items": [
+        "Deliver top-quality products and services using German Moorgen devices.",
+        "Drive innovation and continuous development.",
+        "Enhance quality of life through smart technologies.",
+        "Build trust through honesty and integrity."
+      ]
+    },
+    "partnership": {
+      "title": "Our Partnership with Moorgen",
+      "description": "Moorgen is a German leader in smart home technology, with 600+ smart products for full building control—whether on-site or remotely.",
+      "features": [
+        "Over 160 technology patents.",
+        "100% quality-tested products.",
+        "International certifications including CE, FCC, UL, TUV, VDE, ROHS, CCC."
+      ]
+    },
+    "projects": {
+      "title": "Our Projects",
+      "description": "Life Tech has successfully completed 300+ smart building projects across Saudi Arabia, including more than 200 private villas, hotels, hospitals, and commercial facilities.",
+      "items": [
+        {
+          "number": "+ 200",
+          "label": "private villas"
+        },
+        {
+          "number": "+ 300",
+          "label": "Project"
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "What Our Clients Say",
+      "items": [
+        {
+          "quote": "\" Life Tech transformed our villa with smart solutions that made daily living easier and more comfortable \"",
+          "name": "Mohammad Khaled",
+          "position": "Villa Owner, Riyadh"
+        },
+        {
+          "quote": "\"Thanks to Life Tech, our hotel now offers guests a seamless experience with smart lighting, AC, and entertainment systems \"",
+          "name": "Afnan Hammed",
+          "position": "Hotel Manager, Jeddah"
+        },
+        {
+          "quote": "\" The automation system has improved our building efficiency significantly \"",
+          "name": "Ahmed Al-Rashid",
+          "position": "Building Manager, Dammam"
+        },
+        {
+          "quote": "\" Outstanding service and cutting-edge technology \"",
+          "name": "Sara Abdullah",
+          "position": "Hospital Administrator, Riyadh"
+        }
+      ]
+    },
+    "values": {
+      "title": "Our Values",
+      "items": [
+        {
+          "title": "Quality",
+          "description": "Delivering premium products and excellent services"
+        },
+        {
+          "title": "Innovation",
+          "description": "Developing advanced smart solutions tailored to customer needs"
+        },
+        {
+          "title": "Customer Satisfaction",
+          "description": "Treating clients as family and ensuring exceptional experiences"
+        },
+        {
+          "title": "Social Responsibility",
+          "description": "Supporting ethical values and contributing to community and environmental initiatives"
+        }
+      ]
+    },
+    "mediaSlider": {
+      "slides": [
+        {
+          "title": "Demo Video"
+        },
+        {
+          "title": "Presentation Image"
+        },
+        {
+          "title": "Conference Video"
+        },
+        {
+          "title": "Team Image"
+        }
+      ]
+    }
   }
+
 }

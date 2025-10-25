@@ -1,8 +1,9 @@
  .btn-custom {
       /* size per design */
-      width: 151px;
-      height: 50px;
-      padding: 0 20px; /* vertical size fixed by height, horizontal padding per design */
+       width: auto;
+  min-width: 160px; /* أقل عرض ثابت علشان ميصغرش أوي */
+  height: 50px;
+  padding: 0 28px; /* vertical size fixed by height, horizontal padding per design */
       border-radius: 24px;
       font-size: 16px;
       font-weight: 500;

@@ -20,6 +20,7 @@ export class HeaderComponent implements OnInit {
   @Input() logoRoute: string = '/';
   
   @Input() navItems: NavItem[] = [
+    {label:'home', route:''},
     { label: 'smartHomes', route: '/smart-homes'},
     { label: 'products', route: '/products' },
     { label: 'solutions', route: '/solutions'},

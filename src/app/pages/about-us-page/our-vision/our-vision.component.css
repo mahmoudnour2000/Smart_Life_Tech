@@ -1,0 +1,188 @@
+.vision-section {
+  padding: 4rem 0;
+  background-color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Vision Content Layout */
+.vision-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  text-align: center;
+}
+
+/* Image Side */
+.vision-image-wrapper {
+  position: relative;
+}
+
+/* Border Frame (الخطوط المتقطعة - الطبقة السفلية) */
+.border-frame {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: -15px;
+  bottom: -15px;
+  border: 3px dashed #d1d5db;
+  border-radius: 20px;
+  z-index: 0;
+}
+
+/* Main Image Container (الطبقة العلوية) */
+.image-container {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  background-color: white;
+}
+
+.vision-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Text Side */
+.vision-text {
+  padding: 2rem 0;
+}
+
+.vision-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+}
+
+.vision-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .vision-content {
+    gap: 3rem;
+  }
+
+  .vision-title {
+    font-size: 2rem;
+  }
+
+  .border-frame {
+    top: 12px;
+    left: 12px;
+    right: -12px;
+    bottom: -12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .vision-section {
+    padding: 3rem 0;
+  }
+
+  .vision-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .vision-image-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .border-frame {
+    top: 10px;
+    left: 10px;
+    right: -10px;
+    bottom: -10px;
+    border-width: 2px;
+  }
+
+  .vision-text {
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .vision-title {
+    font-size: 1.85rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .vision-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 576px) {
+  .vision-section {
+    padding: 2.5rem 0;
+  }
+
+  .vision-content {
+    gap: 2rem;
+  }
+
+  .image-container {
+    border-radius: 15px;
+  }
+
+  .border-frame {
+    border-radius: 15px;
+    top: 8px;
+    left: 8px;
+    right: -8px;
+    bottom: -8px;
+  }
+
+  .vision-title {
+    font-size: 1.65rem;
+    margin-bottom: 1rem;
+  }
+
+  .vision-description {
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+}
+
+/* RTL Support */
+html[dir="rtl"] .border-frame {
+  left: -15px;
+  right: 15px;
+}
+
+@media (max-width: 992px) {
+  html[dir="rtl"] .border-frame {
+    left: -12px;
+    right: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  html[dir="rtl"] .border-frame {
+    left: -10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  html[dir="rtl"] .border-frame {
+    left: -8px;
+    right: 8px;
+  }
+}

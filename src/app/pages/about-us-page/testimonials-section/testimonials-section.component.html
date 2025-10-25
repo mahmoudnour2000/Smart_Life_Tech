@@ -1,0 +1,74 @@
+ <section class="testimonials-section" [attr.aria-label]="ariaLabel">
+      <div class="container">
+        <!-- Title Section -->
+        <div class="text-center mb-5">
+          <h2 class="section-title">{{ 'aboutUs.testimonials.title' | translate }}</h2>
+        </div>
+
+        <!-- Testimonials Slider -->
+        <div class="testimonials-slider-container">
+          <div
+            class="testimonials-slider"
+            [style.transform]="getSliderTransform()">
+            <div
+              class="testimonial-slide"
+              *ngFor="let group of testimonialGroups; let i = index">
+              <div class="row g-4">
+                <div class="col-12 col-md-6" *ngFor="let testimonialKey of group; let j = index">
+                  <div class="testimonial-card">
+                    <!-- Avatar -->
+                    <div class="avatar-wrapper">
+                      <img
+                        [src]="'assets/images/feedback' + ((i * 2 + j) % 2 + 1) + '.png'"
+                        [alt]="('aboutUs.testimonials.items.' + (i * 2 + j) + '.imageAlt') | translate"
+                        class="testimonial-avatar">
+                    </div>
+
+                    <!-- Quote Icon -->
+<img src="assets/images/icon-quote.png" alt="quote icon" class="quote-icon">
+
+                    <!-- Quote Text -->
+                    <p class="testimonial-quote">{{ testimonialKey + '.quote' | translate }}</p>
+
+                    <!-- Author Info -->
+                    <div class="testimonial-author">
+                      <h4 class="author-name">{{ testimonialKey + '.name' | translate }}</h4>
+                      <p class="author-position">{{ testimonialKey + '.position' | translate }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Controls -->
+        <div class="slider-navigation">
+          <div class="navigation-left">
+            <button
+              class="nav-arrow prev-arrow"
+              (click)="previousSlide()"
+              [disabled]="currentSlide === 0"
+              [attr.aria-label]="'Previous testimonials'">
+              <span>‹</span>
+            </button>
+            <button
+              class="nav-arrow next-arrow"
+              (click)="nextSlide()"
+              [disabled]="currentSlide === testimonialGroups.length - 1"
+              [attr.aria-label]="'Next testimonials'">
+              <span>›</span>
+            </button>
+          </div>
+          <div class="navigation-dots">
+            <button
+              *ngFor="let group of testimonialGroups; let i = index"
+              class="dot"
+              [class.active]="i === currentSlide"
+              (click)="goToSlide(i)"
+              [attr.aria-label]="'Go to testimonial group ' + (i + 1)">
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
