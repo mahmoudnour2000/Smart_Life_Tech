@@ -1,0 +1,28 @@
+<section class="values-section" [attr.aria-label]="ariaLabel">
+      <div class="container-fluid px-4">
+        <!-- Title Section -->
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="section-title">{{ 'aboutUs.values.title' | translate }}</h2>
+          </div>
+        </div>
+
+        <!-- Values Cards -->
+        <div class="row g-4">
+          <div
+            class="col-lg-3 col-md-6"
+            *ngFor="let card of ['aboutUs.values.items.0', 'aboutUs.values.items.1', 'aboutUs.values.items.2', 'aboutUs.values.items.3']; let i = index">
+            <div class="value-card">
+              <div class="card-icon-wrapper">
+                <img
+                  [src]="'assets/images/' + (i === 0 ? 'quality.png' : i === 1 ? 'innovation.png' : i === 2 ? 'customer.png' : 'social.png')"
+                  [alt]="('aboutUs.values.items.' + i + '.iconAlt') | translate"
+                  class="card-icon">
+              </div>
+              <h3 class="card-title">{{ 'aboutUs.values.items.' + i + '.title' | translate }}</h3>
+              <p class="card-description">{{ 'aboutUs.values.items.' + i + '.description' | translate }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

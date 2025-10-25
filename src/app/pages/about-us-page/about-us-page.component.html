@@ -1,8 +1,21 @@
  <app-hero-section
-    [backgroundImage]="'assets/images/partner-hero.png'"
-        [title]="'partner.title' | translate"
-    [subtitle]="'partner.subtitle' | translate"
-
+    [backgroundImage]="'assets/images/aboutHero.png'"
+    [title]="'aboutUs.hero.title' | translate"
+    [buttonText]="'aboutUs.hero.buttonText' | translate"
+    [buttonRoute]="'/learn-more'"
+    [showButton]="true"
+   
   >
- 
   </app-hero-section>
+    <app-about-us-paragraph></app-about-us-paragraph>
+
+  <div class="container">
+    <app-our-vision></app-our-vision>
+    <app-our-goals></app-our-goals>
+    <app-simple-cards>
+</app-simple-cards>
+<app-partnership-section></app-partnership-section>
+<app-projects-section></app-projects-section>
+<app-testimonials-section></app-testimonials-section>
+<app-media-slider></app-media-slider>
+  </div>

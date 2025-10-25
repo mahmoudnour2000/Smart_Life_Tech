@@ -50,6 +50,8 @@ export class PartnersSectionComponent implements OnInit {
 
   ngOnDestroy(): void {
     this.stopAutoPlay();
+      if (typeof document === 'undefined') return; 
+
     window.removeEventListener('resize', () => {});
   }
 

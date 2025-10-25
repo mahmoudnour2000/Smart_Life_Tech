@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LanguageSwitcherComponent } from "./shared/components/language-switcher/language-switcher.component";
 import { TranslateService } from '@ngx-translate/core';
@@ -9,7 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
+export class App implements OnInit {
   protected readonly title = signal('SmartLifeTech');
     constructor(private translate: TranslateService) {
     // Set default language

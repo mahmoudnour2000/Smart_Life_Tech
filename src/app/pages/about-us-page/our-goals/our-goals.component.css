@@ -1,0 +1,182 @@
+.goals-section {
+  padding: 4rem 0;
+  background-color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 3rem;
+}
+
+/* Goals Content Layout */
+.goals-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Goals List (Left Side) */
+.goals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.goal-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.goal-icon-wrapper {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #9ba5e8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+.goal-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+
+
+.goal-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4a5568;
+  margin: 0;
+  padding-top: 5px;
+}
+
+/* Main Image (Right Side) */
+.goals-image {
+  width: 100%;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .goals-content {
+    gap: 3rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .goals-list {
+    gap: 1.75rem;
+  }
+
+  .goal-icon-wrapper {
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+  }
+
+  .goal-text {
+    font-size: 0.95rem;
+  }
+
+  .main-image {
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .goals-section {
+    padding: 3rem 0;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .goals-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .goals-list {
+    gap: 1.5rem;
+  }
+
+  .goal-icon-wrapper {
+    width: 42px;
+    height: 42px;
+  }
+
+  .goal-text {
+    font-size: 0.95rem;
+  }
+
+  .goals-image {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .main-image {
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .goals-section {
+    padding: 2.5rem 0;
+  }
+
+  .section-title {
+    font-size: 1.65rem;
+    margin-bottom: 2rem;
+  }
+
+  .goals-list {
+    gap: 1.25rem;
+  }
+
+  .goal-item {
+    gap: 0.875rem;
+  }
+
+  .goal-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    padding: 9px;
+  }
+
+  .goal-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .main-image {
+    border-radius: 15px;
+  }
+}

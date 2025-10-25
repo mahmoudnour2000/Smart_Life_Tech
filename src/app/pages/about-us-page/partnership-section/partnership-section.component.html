@@ -1,0 +1,35 @@
+ <section class="partnership-section" [attr.aria-label]="ariaLabel">
+      <div class="container-fluid px-4">
+        <div class="row">
+          <div class="col-12 text-center mb-5">
+            <h2 class="section-title">{{ 'aboutUs.partnership.title' | translate }}</h2>
+          </div>
+        </div>
+
+        <div class="row align-items-center g-5">
+          <!-- Content Side -->
+          <div class="col-lg-6" [class.order-lg-2]="imagePosition === 'left'">
+            <div class="content-wrapper">
+              <p class="main-description">{{ 'aboutUs.partnership.description' | translate }}</p>
+
+              <ul class="features-list">
+                <li *ngFor="let feature of ['aboutUs.partnership.features.0', 'aboutUs.partnership.features.1', 'aboutUs.partnership.features.2']" class="feature-item">
+                  {{ feature | translate }}
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Image Side -->
+          <div class="col-lg-6" [class.order-lg-1]="imagePosition === 'left'">
+            <div class="image-wrapper">
+              <img 
+                [src]="partnerLogo" 
+                [alt]="partnerName + ' logo'"
+                [title]="partnerName"
+                class="partner-logo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

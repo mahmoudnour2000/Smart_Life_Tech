@@ -1,0 +1,26 @@
+<section class="projects-section" [attr.aria-label]="ariaLabel">
+      <div class="container-fluid px-4">
+        <!-- Title Section -->
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="section-title">{{ 'aboutUs.projects.title' | translate }}</h2>
+            <p class="section-description">{{ 'aboutUs.projects.description' | translate }}</p>
+          </div>
+        </div>
+
+        <!-- Projects Cards -->
+        <div class="row g-4">
+          <div
+            class="col-lg-6"
+            *ngFor="let project of ['aboutUs.projects.items.0', 'aboutUs.projects.items.1']; let i = index">
+            <div class="project-card" [style.background-image]="'url(assets/images/' + (i === 0 ? 'villas.png' : 'projects.png') + ')'">
+              <div class="project-overlay"></div>
+              <div class="project-content">
+                <h3 class="project-number">{{ 'aboutUs.projects.items.' + i + '.number' | translate }}</h3>
+                <p class="project-label">{{ 'aboutUs.projects.items.' + i + '.label' | translate }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

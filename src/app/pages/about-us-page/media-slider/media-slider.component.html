@@ -1,0 +1,57 @@
+<div class="slider-container" dir="rtl">
+      <div class="slider-wrapper">
+        <!-- منطقة عرض الوسائط - مساحة كبيرة -->
+        <div class="media-display">
+          <div *ngIf="currentMedia.type === 'video'" class="video-container">
+            <iframe
+              [src]="getSafeUrl(currentMedia.url)"
+              class="video-iframe"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              [title]="currentMedia.title | translate">
+            </iframe>
+          </div>
+
+          <div *ngIf="currentMedia.type === 'image'" class="image-container">
+            <img
+              [src]="currentMedia.url"
+              [alt]="currentMedia.title | translate"
+              class="slide-image">
+          </div>
+        </div>
+
+        <!-- أزرار التنقل والمؤشرات - مفصولين -->
+        <div class="controls-section">
+           <div class="indicators">
+            <button
+              *ngFor="let slide of [0,1,2,3]; let i = index"
+              (click)="goToSlide(i)"
+              [class.active]="i === currentSlide"
+              class="indicator"
+              [attr.aria-label]="'aboutUs.media.ariaLabel' | translate">
+            </button>
+          </div>
+          <div class="nav-buttons-group">
+            <button
+              (click)="prevSlide()"
+              class="nav-button"
+              aria-label="السابق">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+
+            <button
+              (click)="nextSlide()"
+              class="nav-button"
+              aria-label="التالي">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+
+         
+        </div>
+      </div>
+    </div>
